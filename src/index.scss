@@ -1,0 +1,116 @@
+/* other formats include:
+'woff2', 'truetype, 'opentype','embedded-opentype', and 'svg' */
+@font-face {
+    font-family: 'Aldedesign-WisdomMerry';
+    src: local('Aldedesign-WisdomMerry'), url('./fonts/Aldedesign-WisdomMerry.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Apricots-Regular';
+    src: local('Apricots-Regular'), url('./fonts/Apricots-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Awanstudio-Aubrielle-Regular';
+    src: local('Awanstudio-Aubrielle-Regular'), url('./fonts/Awanstudio-Aubrielle-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Bralyn';
+    src: local('Bralyn'), url('./fonts/Bralyn.otf') format('opentype');
+}
+@font-face {
+    font-family: 'BrittanySignature';
+    src: local('BrittanySignature'), url('./fonts/BrittanySignature.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CultivatedMind-GardenGrownBCaps';
+    src: local('CultivatedMind-GardenGrownBCaps'), url('./fonts/CultivatedMind-GardenGrownBCaps.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Datalegreya-Dot';
+    src: local('Datalegreya-Dot'), url('./fonts/Datalegreya-Dot.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Dmitrii Chirkov-Joshico-Regular';
+    src: local('Dmitrii Chirkov-Joshico-Regular'), url('./fonts/DmitriiChirkov-Joshico-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Fikryal-HelloSnowflake';
+    src: local('Fikryal-HelloSnowflake'), url('./fonts/Fikryal-HelloSnowflake.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gistesy';
+    src: local('Gistesy'), url('./fonts/Gistesy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'hellohoney';
+    src: local('hellohoney'), url('./fonts/hellohoney.otf') format('opentype');
+}
+@font-face {
+    font-family: 'JeffLevine-InlineRetroJNL';
+    src: local('JeffLevine-InlineRetroJNL'), url('./fonts/JeffLevine-InlineRetroJNL.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Khurasan-Sheenaz';
+    src: local('Khurasan-Sheenaz'), url('./fonts/Khurasan-Sheenaz.otf') format('opentype');
+}
+@font-face {
+    font-family: 'KimberlyGeswein-KGRiseUP';
+    src: local('KimberlyGeswein-KGRiseUP'), url('./fonts/KimberlyGeswein-KGRiseUP.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LoveloBlack';
+    src: local('LoveloBlack'), url('./fonts/LoveloBlack.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MadinaClean';
+    src: local('MadinaClean'), url('./fonts/MadinaClean.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MadinaCleanOrnaments';
+    src: local('MadinaCleanOrnaments'), url('./fonts/MadinaCleanOrnaments.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MegaType-KameliaScript-Regular';
+    src: local('MegaType-KameliaScript-Regular'), url('./fonts/MegaType-KameliaScript-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MegaType-YasmineGardner';
+    src: local('MegaType-YasmineGardner'), url('./fonts/MegaType-YasmineGardner.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Pompiere-Regular';
+    src: local('Pompiere-Regular'), url('./fonts/Pompiere-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Putracetol-CavilayScript';
+    src: local('Putracetol-CavilayScript'), url('./fonts/Putracetol-CavilayScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Raleway-Medium';
+    src: local('Raleway-Medium'), url('./fonts/Raleway-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Samtype-HebrewKarina-Regular';
+    src: local('Samtype-HebrewKarina-Regular'), url('./fonts/Samtype-HebrewKarina-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SansAndSons-MonthoersSignature';
+    src: local('SansAndSons-MonthoersSignature'), url('./fonts/SansAndSons-MonthoersSignature.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SoftMaker-TypewriterSerial';
+    src: local('SoftMaker-TypewriterSerial'), url('./fonts/SoftMaker-TypewriterSerial.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SophiaRonald';
+    src: local('SophiaRonald'), url('./fonts/SophiaRonald.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Typesketchbook-BetmRounded-ExtraLight';
+    src: local('Typesketchbook-BetmRounded-ExtraLight'), url('./fonts/Typesketchbook-BetmRounded-ExtraLight.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ZaneStudio-HelloSunriseScript';
+    src: local('ZaneStudio-HelloSunriseScript'), url('./fonts/ZaneStudio-HelloSunriseScript.otf') format('opentype');
+}
+@import './App';
+@import '~bootstrap/scss/bootstrap.scss';
