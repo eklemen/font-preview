@@ -112,5 +112,34 @@
     font-family: 'ZaneStudio-HelloSunriseScript';
     src: local('ZaneStudio-HelloSunriseScript'), url('./fonts/ZaneStudio-HelloSunriseScript.otf') format('opentype');
 }
+///////////////
+@font-face {
+    font-family: 'Alegreya-Regular';
+    src: local('Alegreya-Regular'), url('./fonts/Alegreya-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BebasNeue-Regular';
+    src: local('BebasNeue-Regular'), url('./fonts/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Fontforecast-SaltAndSpicesMonoBold';
+    src: local('Fontforecast-SaltAndSpicesMonoBold'), url('./fonts/Fontforecast-SaltAndSpicesMonoBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Hanoded-LemonYellowSunExtraBoldRegular';
+    src: local('Hanoded-LemonYellowSunExtraBoldRegular'), url('./fonts/Hanoded-LemonYellowSunExtraBoldRegular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Lemonthe-CaltonEleganceScript';
+    src: local('Lemonthe-CaltonEleganceScript'), url('./fonts/Lemonthe-CaltonEleganceScript.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'LibreBaskerville-Regular';
+    src: local('LibreBaskerville-Regular'), url('./fonts/LibreBaskerville-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MalisiaScript';
+    src: local('MalisiaScript'), url('./fonts/MalisiaScript.otf') format('opentype');
+}
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';
