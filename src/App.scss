@@ -1,5 +1,11 @@
 .font-box {
-    max-height: 111px;
+    height: 140px;
+    max-height: 140px;
     overflow: hidden;
+}
+.fave-btn {
+    label {
+        margin-top: -1rem;
+    }
 }
 

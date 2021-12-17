@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Form from 'react-bootstrap/Form';
-import Button from 'react-bootstrap/Button';
+import Navbar from 'react-bootstrap/Navbar';
 import { HeartFill } from 'react-bootstrap-icons';
 import { getBlockFonts, getScriptFonts } from './fontRegistry';
-import FontTile from './FontTile';
+import FontTile from './components/FontTile';
+import NameInputs from './components/NameInputs';
+import ShowFavoriteButton from './components/ShowFavoriteButton';
 
 function App() {
   const [inputVal, setInputVal] = useState({
@@ -15,6 +16,7 @@ function App() {
   });
   const [scriptFonts, setScriptFonts] = useState(getScriptFonts);
   const [blockFonts, setBlockFonts] = useState(getBlockFonts);
+  const [showFaves, setShowFaves] = useState(false);
   const handleChange = ({ target }) => {
     if (!target.value.length) {
       setInputVal({
@@ -34,100 +36,79 @@ function App() {
         f.fontFamily === fontFamily
           ? { ...f, favorite: !f.favorite }
           : f
-      ))
+      ));
       setScriptFonts(updated);
     } else {
       const updated = blockFonts.map((f) => (
         f.fontFamily === fontFamily
           ? { ...f, favorite: !f.favorite }
           : f
-      ))
+      ));
       setBlockFonts(updated);
     }
   };
-  const showFavorites = () => {
-    // const scripts = scriptFonts.filter((f) => !f.favorite);
-    // const blocks = blockFonts.filter((f) => !f.favorite);
-    // setScriptFonts(scripts);
-    // setBlockFonts(blocks);
-  };
+  const renderList = (scripts = true) => {
+    let list;
+    if (scripts) {
+      list = showFaves ?
+        scriptFonts.filter((f) => f.favorite) :
+        scriptFonts;
+    } else {
+      list = showFaves ?
+        blockFonts.filter((f) => f.favorite) :
+        blockFonts;
+    }
+    return !list.length ?
+      <p>Favorite <HeartFill/> a {scripts ? 'script' : 'block'} font from this list to compare.</p>
+      : list.map((font) => (<FontTile
+        key={font.fontFamily}
+        font={font}
+        inputVal={inputVal.firstName}
+        handleFavorite={handleFavorite}
+      />));
+  }
   return (
-    <Container>
-      <Row>
-        <h1>Font Preview</h1>
-      </Row>
-      <Row>
-        <Col>
-          <h3>Tips for selecting fonts</h3>
-          <ul>
-            <li>Type your name into each input below</li>
-            <li>Left column are script fonts</li>
-            <li>Right column are block fonts</li>
-            <li>Typically girl's names are script first name and block middle names</li>
-            <li>Typically boy's names are block first names and script middle names</li>
-            <li>Click the heart icon <HeartFill /> to favorite fonts to compare later</li>
-          </ul>
-        </Col>
-      </Row>
-      <Row>
-        <Form as={Row}>
-          <Form.Group as={Col} className="mb-3" controlId="exampleForm.ControlInput1">
-            <Form.Control
-              size="lg"
-              type="text"
-              placeholder="Enter First Name"
-              name="firstName"
-              onChange={handleChange}
-            />
-          </Form.Group>
-          <Form.Group as={Col} className="mb-3 ml-1" controlId="exampleForm.ControlInput1">
-            <Form.Control
-              size="lg"
-              type="text"
-              placeholder="Enter Middle Name"
-              name="middleName"
-              onChange={handleChange}
-            />
-          </Form.Group>
-        </Form>
-      </Row>
-      <Row>
-        <Col>
-          <Button
-            variant="outline-primary"
-            className="mb-2"
-            onClick={() => showFavorites(true)}
-          >Compare Favorites</Button>
-          {/*<Button*/}
-          {/*  variant="outline-primary"*/}
-          {/*  className="mb-2">Show All</Button>*/}
-        </Col>
-      </Row>
-      <Row>
-        <Col xs={6}>
-          {
-            scriptFonts.map((font) => (
-              <FontTile
-                font={font}
-                inputVal={inputVal.firstName}
-                handleFavorite={handleFavorite}
-              />
-            ))
-          }
-        </Col>
-        <Col xs={6}>
-          {
-            blockFonts.map((font) => (
-              <FontTile
-                font={font}
-                inputVal={inputVal.middleName}
-                handleFavorite={handleFavorite}
-              />
-            ))
-          }
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <Navbar bg="light" fixed="bottom">
+        <Container className="justify-content-end">
+          <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
+        </Container>
+      </Navbar>
+      <Container className="mb-5 pb-5">
+        <Row>
+          <h1>Font Preview</h1>
+        </Row>
+        <Row>
+          <Col>
+            <h3>Tips for selecting fonts</h3>
+            <ul>
+              <li>Type your name into each input below</li>
+              <li>Left column are script fonts</li>
+              <li>Right column are block fonts</li>
+              <li>Typically girl's names are script first name and block middle names</li>
+              <li>Typically boy's names are block first names and script middle names</li>
+              <li>Click the heart icon <HeartFill/> to favorite fonts to compare later</li>
+            </ul>
+          </Col>
+        </Row>
+        <Row>
+          <NameInputs handleChange={handleChange}/>
+        </Row>
+        <Row>
+          <Col xs={6}>
+            <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={6}>
+            {renderList()}
+          </Col>
+          <Col xs={6}>
+            {renderList(false)}
+          </Col>
+        </Row>
+      </Container>
+    </>
   );
 }
 
