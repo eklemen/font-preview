@@ -8,4 +8,19 @@
         margin-top: -1rem;
     }
 }
+.bg-top {
+    background-color: rgba(211, 135, 132, 0.33);
+    margin-bottom: 5rem;
+    padding-top: 3rem;
+    color: #3e3e3e;
+    position: relative;
+    .wave-border {
+        position: absolute;
+        height: 100px;
+        width: 100%;
+        path {
+            fill: rgba(211, 135, 132, 0.33);
+        }
+    }
+}
 

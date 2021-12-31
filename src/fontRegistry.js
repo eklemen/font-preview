@@ -24,7 +24,7 @@ export const fontRegistry = [
     fontFamily: 'Bralyn',
     displayName: 'Bralyn',
     script: true,
-    size: 2,
+    size: 3.5,
     favorite: false,
   },
   {
@@ -59,14 +59,14 @@ export const fontRegistry = [
     fontFamily: 'Fikryal-HelloSnowflake',
     displayName: 'Fikryal-HelloSnowflake',
     script: true,
-    size: 2,
+    size: 3,
     favorite: false,
   },
   {
     fontFamily: 'Gistesy',
     displayName: 'Gistesy',
     script: true,
-    size: 2,
+    size: 3,
     favorite: false,
   },
   {
@@ -178,7 +178,7 @@ export const fontRegistry = [
     fontFamily: 'SophiaRonald',
     displayName: 'SophiaRonald',
     script: true,
-    size: 2,
+    size: 5,
     favorite: false,
   },
   {
@@ -192,7 +192,7 @@ export const fontRegistry = [
     fontFamily: 'ZaneStudio-HelloSunriseScript',
     displayName: 'ZaneStudio-HelloSunrise',
     script: true,
-    size: 2,
+    size: 3,
     favorite: false,
   },
   {

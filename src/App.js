@@ -74,40 +74,50 @@ function App() {
           <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
         </Container>
       </Navbar>
-      <Container className="mb-5 pb-5">
-        <Row>
-          <h1>Font Preview</h1>
-        </Row>
-        <Row>
-          <Col>
-            <h3>Tips for selecting fonts</h3>
-            <ul>
-              <li>Type your name into each input below</li>
-              <li>Left column are script fonts</li>
-              <li>Right column are block fonts</li>
-              <li>Typically girl's names are script first name and block middle names</li>
-              <li>Typically boy's names are block first names and script middle names</li>
-              <li>Click the heart icon <HeartFill/> to favorite fonts to compare later</li>
-            </ul>
-          </Col>
-        </Row>
-        <Row>
-          <NameInputs handleChange={handleChange}/>
-        </Row>
-        <Row>
-          <Col xs={6}>
-            <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs={6}>
-            {renderList()}
-          </Col>
-          <Col xs={6}>
-            {renderList(false)}
-          </Col>
-        </Row>
-      </Container>
+      <div className="mb-5 pb-5">
+        <div className="bg-top">
+          <Container>
+            <Row>
+              <h1 style={{ fontFamily: 'Raleway', fontWeight: 'bold' }}>Font Preview</h1>
+            </Row>
+            <Row>
+              <Col style={{ fontFamily: 'Raleway' }}>
+                <h3>Tips for selecting fonts</h3>
+                <ul>
+                  <li>Type your name into each input below</li>
+                  <li>Left column are script fonts</li>
+                  <li>Right column are block fonts</li>
+                  <li>Typically girl's names are script first name and block middle names</li>
+                  <li>Typically boy's names are block first names and script middle names</li>
+                  <li>Click the heart icon <HeartFill/> to favorite fonts to compare later</li>
+                </ul>
+              </Col>
+            </Row>
+          </Container>
+          <svg viewBox="0 0 500 150" preserveAspectRatio="none" className="wave-border">
+            <path d="M0.00,49.98 C149.99,150.00 243.79,-13.31 500.00,49.98 L500.00,0.00 L0.00,0.00 Z"
+                  style={{ stroke: 'none' }}/>
+          </svg>
+        </div>
+        <Container>
+          <Row>
+            <NameInputs handleChange={handleChange}/>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={6}>
+              {renderList()}
+            </Col>
+            <Col xs={6}>
+              {renderList(false)}
+            </Col>
+          </Row>
+        </Container>
+      </div>
     </>
   );
 }

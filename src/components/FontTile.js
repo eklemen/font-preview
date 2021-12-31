@@ -24,7 +24,8 @@ const FontTile = (
             <h2 style={{
               fontFamily: fontFamily,
               fontSize: `${size}rem`,
-              lineHeight: '24px'
+              lineHeight: '24px',
+              paddingLeft: '1rem'
             }}>
               {inputVal}
             </h2>
