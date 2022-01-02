@@ -10,7 +10,7 @@ const NameInputs = ({handleChange}) => {
         <Form.Control
           size="lg"
           type="text"
-          placeholder="Enter First Name"
+          placeholder="Enter Name"
           name="firstName"
           onChange={handleChange}
         />
@@ -19,7 +19,7 @@ const NameInputs = ({handleChange}) => {
         <Form.Control
           size="lg"
           type="text"
-          placeholder="Enter Middle Name"
+          placeholder="Enter Name"
           name="middleName"
           onChange={handleChange}
         />

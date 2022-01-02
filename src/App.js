@@ -63,7 +63,7 @@ function App() {
       : list.map((font) => (<FontTile
         key={font.fontFamily}
         font={font}
-        inputVal={inputVal.firstName}
+        inputVal={scripts ? inputVal.firstName : inputVal.middleName}
         handleFavorite={handleFavorite}
       />));
   }
@@ -110,9 +110,11 @@ function App() {
           </Row>
           <Row>
             <Col xs={6}>
+              <h3>Script Fonts</h3>
               {renderList()}
             </Col>
             <Col xs={6}>
+              <h3>Block Fonts</h3>
               {renderList(false)}
             </Col>
           </Row>
