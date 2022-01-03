@@ -8,6 +8,8 @@ import { getBlockFonts, getScriptFonts } from './fontRegistry';
 import FontTile from './components/FontTile';
 import NameInputs from './components/NameInputs';
 import ShowFavoriteButton from './components/ShowFavoriteButton';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
 
 function App() {
   const [inputVal, setInputVal] = useState({
@@ -17,6 +19,7 @@ function App() {
   const [scriptFonts, setScriptFonts] = useState(getScriptFonts);
   const [blockFonts, setBlockFonts] = useState(getBlockFonts);
   const [showFaves, setShowFaves] = useState(false);
+  const [activeTab, setActiveTab] = useState('script');
   const handleChange = ({ target }) => {
     if (!target.value.length) {
       setInputVal({
@@ -67,6 +70,8 @@ function App() {
         handleFavorite={handleFavorite}
       />));
   }
+  const visibleXs = 'd-flex d-sm-none';
+  const visibleAboveXs = 'd-none d-sm-flex';
   return (
     <>
       <Navbar bg="light" fixed="bottom">
@@ -101,14 +106,20 @@ function App() {
         </div>
         <Container>
           <Row>
-            <NameInputs handleChange={handleChange}/>
+            <NameInputs className={visibleAboveXs} handleChange={handleChange}/>
+            <NameInputs
+              className={visibleXs}
+              mobile
+              activeTab={activeTab}
+              handleChange={handleChange}
+            />
           </Row>
-          <Row>
+          <Row className={visibleAboveXs}>
             <Col xs={6}>
               <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
             </Col>
           </Row>
-          <Row>
+          <Row className={visibleAboveXs}>
             <Col xs={6}>
               <h3>Script Fonts</h3>
               {renderList()}
@@ -116,6 +127,24 @@ function App() {
             <Col xs={6}>
               <h3>Block Fonts</h3>
               {renderList(false)}
+            </Col>
+          </Row>
+        </Container>
+        <Container>
+          <Row className={visibleXs}>
+            <Col>
+              <Tabs
+                activeKey={activeTab}
+                onSelect={k => setActiveTab(k)}
+                className="mb-3"
+              >
+                <Tab eventKey="script" title="Script Fonts">
+                  {renderList()}
+                </Tab>
+                <Tab eventKey="block" title="Block Fonts">
+                  {renderList(false)}
+                </Tab>
+              </Tabs>
             </Col>
           </Row>
         </Container>
