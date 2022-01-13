@@ -14,19 +14,25 @@ const FontTile = (
   }) => {
   const { fontFamily, size, script, favorite, displayName } = font;
   return (
-    <Card key={fontFamily} className="mb-3 font-box">
+    <Card
+      key={fontFamily}
+      className="mb-3 font-box"
+    >
       <Card.Body>
         <Card.Subtitle className="text-muted">
           Font: <strong>{startCase(displayName)}</strong>
         </Card.Subtitle>
         <Row className="h-100">
           <Col xs={10} className="d-flex align-items-center">
-            <h2 style={{
-              fontFamily: fontFamily,
-              fontSize: `${size}rem`,
-              lineHeight: '24px',
-              paddingLeft: '1rem'
-            }}>
+            <h2
+              style={{
+                fontFamily: fontFamily,
+                fontSize: `${size}rem`,
+                lineHeight: '24px',
+                paddingLeft: '1rem'
+              }}
+              onClick={() => handleFavorite({ script, fontFamily })}
+            >
               {inputVal}
             </h2>
           </Col>
@@ -38,7 +44,7 @@ const FontTile = (
               value={fontFamily}
               onClick={() => handleFavorite({ script, fontFamily })}
             >
-              {favorite ? <HeartFill /> : <Heart />}
+              {favorite ? <HeartFill/> : <Heart/>}
             </ToggleButton>
           </Col>
         </Row>

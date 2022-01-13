@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import { HeartFill } from 'react-bootstrap-icons';
+import { Heart } from 'react-bootstrap-icons';
 
 const WavyBanner = () => {
   return (
@@ -15,12 +15,10 @@ const WavyBanner = () => {
           <Col style={{ fontFamily: 'Raleway' }}>
             <h3>Tips for selecting fonts</h3>
             <ul>
-              <li>Type your name into each input below</li>
-              <li>Left column are script fonts</li>
-              <li>Right column are block fonts</li>
-              <li>Typically girl's names are script first name and block middle names</li>
-              <li>Typically boy's names are block first names and script middle names</li>
-              <li>Click the heart icon <HeartFill/> to favorite fonts to compare later</li>
+              <li>Enter your name into each input below</li>
+              <li>Typically girl names are script first name and block middle names</li>
+              <li>Typically boy names are block first names and script middle names</li>
+              <li>Click the heart icon <Heart/> to favorite fonts to compare later</li>
             </ul>
           </Col>
         </Row>

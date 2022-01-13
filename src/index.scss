@@ -65,10 +65,6 @@
     src: local('MadinaClean'), url('./fonts/MadinaClean.otf') format('opentype');
 }
 @font-face {
-    font-family: 'MadinaCleanOrnaments';
-    src: local('MadinaCleanOrnaments'), url('./fonts/MadinaCleanOrnaments.otf') format('opentype');
-}
-@font-face {
     font-family: 'MegaType-KameliaScript-Regular';
     src: local('MegaType-KameliaScript-Regular'), url('./fonts/MegaType-KameliaScript-Regular.otf') format('opentype');
 }
@@ -91,10 +87,6 @@
 @font-face {
     font-family: 'Samtype-HebrewKarina-Regular';
     src: local('Samtype-HebrewKarina-Regular'), url('./fonts/Samtype-HebrewKarina-Regular.otf') format('opentype');
-}
-@font-face {
-    font-family: 'SansAndSons-MonthoersSignature';
-    src: local('SansAndSons-MonthoersSignature'), url('./fonts/SansAndSons-MonthoersSignature.otf') format('opentype');
 }
 @font-face {
     font-family: 'SoftMaker-TypewriterSerial';
@@ -139,6 +131,22 @@
 @font-face {
     font-family: 'MalisiaScript';
     src: local('MalisiaScript'), url('./fonts/MalisiaScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Blushed';
+    src: local('Blushed'), url('./fonts/Blushed.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foxtrot';
+    src: local('Foxtrot'), url('./fonts/Foxtrot.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Gingerly';
+    src: local('Gingerly'), url('./fonts/Gingerly.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'HoneyButter';
+    src: local('HoneyButter'), url('./fonts/HoneyButter.ttf') format('truetype');
 }
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';

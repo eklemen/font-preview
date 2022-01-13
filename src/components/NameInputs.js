@@ -3,6 +3,7 @@ import Row from 'react-bootstrap/Row';
 import Form from 'react-bootstrap/Form';
 import Col from 'react-bootstrap/Col';
 import classNames from 'classnames';
+import ColorSelect from './ColorSelect';
 
 const NameInputs = ({handleChange, className, mobile, activeTab}) => {
   const fnClasses = classNames({
@@ -22,6 +23,7 @@ const NameInputs = ({handleChange, className, mobile, activeTab}) => {
           name="firstName"
           onChange={handleChange}
         />
+        <ColorSelect />
       </Form.Group>
       <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput1">
         <Form.Control
