@@ -22,6 +22,8 @@ const FontPicker = () => {
   const [blockFonts, setBlockFonts] = useState(getBlockFonts);
   const [showFaves, setShowFaves] = useState(false);
   const [activeTab, setActiveTab] = useState('script');
+  const [scriptColor, setScriptColor] = useState({ value: 'black', label: 'Black', color: '#000000'});
+  const [blockColor, setBlockColor] = useState({ value: 'black', label: 'Black', color: '#000000'});
   const handleChange = ({ target }) => {
     if (!target.value.length) {
       setInputVal({
@@ -52,13 +54,19 @@ const FontPicker = () => {
       setBlockFonts(updated);
     }
   };
+  const handleColorChange = ({script, ...rest}) => {
+    script ? setScriptColor(rest) : setBlockColor(rest);
+  };
   const renderList = (scripts = true) => {
     let list;
+    let color = { value: 'black', label: 'Black', color: '#000000'};
     if (scripts) {
+      color = scriptColor;
       list = showFaves ?
         scriptFonts.filter((f) => f.favorite) :
         scriptFonts;
     } else {
+      color = blockColor;
       list = showFaves ?
         blockFonts.filter((f) => f.favorite) :
         blockFonts;
@@ -68,6 +76,7 @@ const FontPicker = () => {
       : list.map((font) => (<FontTile
         key={font.fontFamily}
         font={font}
+        color={color.color}
         inputVal={scripts ? inputVal.firstName : inputVal.middleName}
         handleFavorite={handleFavorite}
       />));
@@ -84,8 +93,16 @@ const FontPicker = () => {
       <div className="mb-5 pb-5">
         <WavyBanner />
         <Container>
+          <Row className={visibleAboveXs}>
+            <Col xs={6}>
+              <h3>Script Fonts</h3>
+            </Col>
+            <Col xs={6}>
+              <h3>Block Fonts</h3>
+            </Col>
+          </Row>
           <Row>
-            <NameInputs className={visibleAboveXs} handleChange={handleChange}/>
+            <NameInputs className={visibleAboveXs} handleChange={handleChange} handleColorChange={handleColorChange}/>
             <NameInputs
               className={visibleXs}
               mobile
@@ -100,11 +117,11 @@ const FontPicker = () => {
           </Row>
           <Row className={visibleAboveXs}>
             <Col xs={6}>
-              <h3>Script Fonts</h3>
+              {/*<h3>Script Fonts</h3>*/}
               {renderList()}
             </Col>
             <Col xs={6}>
-              <h3>Block Fonts</h3>
+              {/*<h3>Block Fonts</h3>*/}
               {renderList(false)}
             </Col>
           </Row>

@@ -10,7 +10,8 @@ const FontTile = (
   {
     font,
     inputVal,
-    handleFavorite
+    handleFavorite,
+    color,
   }) => {
   const { fontFamily, size, script, favorite, displayName } = font;
   return (
@@ -29,7 +30,8 @@ const FontTile = (
                 fontFamily: fontFamily,
                 fontSize: `${size}rem`,
                 lineHeight: '24px',
-                paddingLeft: '1rem'
+                paddingLeft: '1rem',
+                color
               }}
               onClick={() => handleFavorite({ script, fontFamily })}
             >

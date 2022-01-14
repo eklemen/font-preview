@@ -5,7 +5,7 @@ import Col from 'react-bootstrap/Col';
 import classNames from 'classnames';
 import ColorSelect from './ColorSelect';
 
-const NameInputs = ({handleChange, className, mobile, activeTab}) => {
+const NameInputs = ({ handleChange, className, mobile, activeTab, handleColorChange }) => {
   const fnClasses = classNames({
     'd-none': mobile && activeTab === 'block',
   }, 'mb-3');
@@ -21,9 +21,10 @@ const NameInputs = ({handleChange, className, mobile, activeTab}) => {
           type="text"
           placeholder="Enter Name"
           name="firstName"
+          className="mb-4"
           onChange={handleChange}
         />
-        <ColorSelect />
+        <ColorSelect onChange={handleColorChange} script />
       </Form.Group>
       <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput1">
         <Form.Control
@@ -31,8 +32,10 @@ const NameInputs = ({handleChange, className, mobile, activeTab}) => {
           type="text"
           placeholder="Enter Name"
           name="middleName"
+          className="mb-4"
           onChange={handleChange}
         />
+        <ColorSelect onChange={handleColorChange} />
       </Form.Group>
     </Form>
   );
