@@ -33,6 +33,24 @@
         }
     }
 }
-//.top-nav {
-// background-color: rgba(211, 135, 132, 0.33);
-//}
+.font-18 {
+    font-size: 18px !important;
+}
+.font-24 {
+    font-size: 24px !important;
+}
+.dark-bg {
+    background-color: #444 !important;
+}
+.btn-pink {
+    color: #c96a66 !important;
+}
+.text-outline {
+    -webkit-text-stroke: 1px #5a5a5a;
+}
+.text-shadow-white {
+    text-shadow: 0 0 2px rgba(0, 0, 0, .5);
+}
+.text-shadow {
+    text-shadow: 0 0 1px rgba(0, 0, 0, .35);
+}

@@ -85,7 +85,6 @@ const FontPicker = () => {
   const visibleAboveXs = 'd-none d-sm-flex';
   return (
     <>
-
       <NavTop/>
       <NavBottom
         showFaves={showFaves}

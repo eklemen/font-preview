@@ -54,6 +54,9 @@ export const fontRegistry = [
     script: true,
     size: 3.5,
     favorite: false,
+    styles: {
+      fontVariantLigatures: 'none'
+    }
   },
   {
     fontFamily: 'Fikryal-HelloSnowflake',

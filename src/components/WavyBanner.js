@@ -10,10 +10,10 @@ const WavyBanner = () => {
     <div className="bg-top">
       <Container>
         <Row>
-          <Col sm={6} style={{ fontFamily: 'Raleway' }}>
+          <Col sm={7} style={{ fontFamily: 'Raleway' }}>
             <h1 style={{ fontFamily: 'Raleway', fontWeight: 'bold' }}>Font Preview</h1>
             <h3>Tips for selecting fonts</h3>
-            <ul>
+            <ul className="font-18">
               <li>Enter your name into each box below</li>
               <li>Most popular combinations are:
                 <ul>
@@ -25,7 +25,7 @@ const WavyBanner = () => {
               <li>Click the heart icon <Heart/> to favorite fonts to compare at the end</li>
             </ul>
           </Col>
-          <Col sm={6}>
+          <Col sm={5}>
             <img src={logo} alt="logo" style={{height: '100%', width: '100%'}}/>
           </Col>
         </Row>

@@ -1,10 +1,11 @@
+import React from 'react';
 import Card from 'react-bootstrap/Card';
 import startCase from 'lodash.startcase';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { Heart, HeartFill } from 'react-bootstrap-icons';
-import React from 'react';
+import classNames from 'classnames';
 
 const FontTile = (
   {
@@ -13,7 +14,8 @@ const FontTile = (
     handleFavorite,
     color,
   }) => {
-  const { fontFamily, size, script, favorite, displayName } = font;
+  const { fontFamily, size, script, favorite, displayName, styles } = font;
+  const additionalStyles = color === '#ffffff' ? 'text-shadow-white' : 'text-shadow'
   return (
     <Card
       key={fontFamily}
@@ -31,8 +33,10 @@ const FontTile = (
                 fontSize: `${size}rem`,
                 lineHeight: '24px',
                 paddingLeft: '1rem',
-                color
+                color,
+                ...styles
               }}
+              className={additionalStyles}
               onClick={() => handleFavorite({ script, fontFamily })}
             >
               {inputVal}
