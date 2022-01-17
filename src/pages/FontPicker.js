@@ -12,6 +12,7 @@ import Col from 'react-bootstrap/Col';
 import ShowFavoriteButton from '../components/ShowFavoriteButton';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import FontPreviewHeader from '../components/FontPreviewHeader';
 
 const FontPicker = () => {
   const [inputVal, setInputVal] = useState({
@@ -90,7 +91,7 @@ const FontPicker = () => {
         showFaves={showFaves}
         setShowFaves={setShowFaves}/>
       <div className="mb-5 pb-5">
-        <WavyBanner />
+        <WavyBanner header={<FontPreviewHeader />} />
         <Container>
           <Row className={visibleAboveXs}>
             <Col xs={6}>

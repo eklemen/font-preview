@@ -1,0 +1,23 @@
+.circle {
+    height: 400px;
+    width: 400px;
+    border: solid 1px black;
+    border-radius: 50%;
+    position: relative;
+    .first-name {
+        width: 335px;
+        position: absolute;
+        left: 8%;
+        top: 30%;
+        height: 100px;
+        text-align: center;
+    }
+    .middle-name {
+        width: 196px;
+        position: absolute;
+        left: 42%;
+        top: 56%;
+        height: 69px;
+        text-align: center;
+    }
+}
