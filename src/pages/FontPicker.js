@@ -1,43 +1,31 @@
-import React, { useState } from 'react';
-import { getBlockFonts, getScriptFonts } from '../fontRegistry';
+import React, { useContext, useState } from 'react';
 import { HeartFill } from 'react-bootstrap-icons';
+import Tabs from 'react-bootstrap/Tabs';
+import Tab from 'react-bootstrap/Tab';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import FontTile from '../components/FontTile';
 import NavTop from '../components/NavTop';
 import NavBottom from '../components/NavBottom';
 import WavyBanner from '../components/WavyBanner';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
 import NameInputs from '../components/NameInputs';
-import Col from 'react-bootstrap/Col';
 import ShowFavoriteButton from '../components/ShowFavoriteButton';
-import Tabs from 'react-bootstrap/Tabs';
-import Tab from 'react-bootstrap/Tab';
 import FontPreviewHeader from '../components/FontPreviewHeader';
+import { appStore } from '../context/app.context';
 
 const FontPicker = () => {
-  const [inputVal, setInputVal] = useState({
-    firstName: 'Name 1',
-    middleName: 'Name 2'
-  });
-  const [scriptFonts, setScriptFonts] = useState(getScriptFonts);
-  const [blockFonts, setBlockFonts] = useState(getBlockFonts);
   const [showFaves, setShowFaves] = useState(false);
   const [activeTab, setActiveTab] = useState('script');
-  const [scriptColor, setScriptColor] = useState({ value: 'black', label: 'Black', color: '#000000'});
-  const [blockColor, setBlockColor] = useState({ value: 'black', label: 'Black', color: '#000000'});
-  const handleChange = ({ target }) => {
-    if (!target.value.length) {
-      setInputVal({
-        ...inputVal,
-        [target.name]: 'Your Name'
-      });
-    } else {
-      setInputVal({
-        ...inputVal,
-        [target.name]: target.value
-      });
-    }
-  };
+  const {
+    inputVal,
+    scriptFonts, setScriptFonts,
+    blockFonts, setBlockFonts,
+    scriptColor,
+    blockColor,
+    handleNameChange,
+    handleColorChange
+  } = useContext(appStore);
   const handleFavorite = ({ script, fontFamily }) => {
     if (Boolean(script)) {
       const updated = scriptFonts.map((f) => (
@@ -54,9 +42,6 @@ const FontPicker = () => {
       ));
       setBlockFonts(updated);
     }
-  };
-  const handleColorChange = ({script, ...rest}) => {
-    script ? setScriptColor(rest) : setBlockColor(rest);
   };
   const renderList = (scripts = true) => {
     let list;
@@ -102,12 +87,16 @@ const FontPicker = () => {
             </Col>
           </Row>
           <Row>
-            <NameInputs className={visibleAboveXs} handleChange={handleChange} handleColorChange={handleColorChange}/>
+            <NameInputs
+              className={visibleAboveXs}
+              handleChange={handleNameChange}
+              handleColorChange={handleColorChange}/>
             <NameInputs
               className={visibleXs}
               mobile
               activeTab={activeTab}
-              handleChange={handleChange}
+              handleChange={handleNameChange}
+              handleColorChange={handleColorChange}
             />
           </Row>
           <Row className={visibleAboveXs}>
@@ -117,11 +106,9 @@ const FontPicker = () => {
           </Row>
           <Row className={visibleAboveXs}>
             <Col xs={6}>
-              {/*<h3>Script Fonts</h3>*/}
               {renderList()}
             </Col>
             <Col xs={6}>
-              {/*<h3>Block Fonts</h3>*/}
               {renderList(false)}
             </Col>
           </Row>

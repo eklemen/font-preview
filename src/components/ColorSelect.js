@@ -65,9 +65,9 @@ const colourStyles = {
   singleValue: (styles, { data }) => ({ ...styles, ...dot(data.color) }),
 };
 
-const ColorSelect = ({ onChange, script }) => (
+const ColorSelect = ({ onChange, script, selectedColor }) => (
   <Select
-    defaultValue={colourOptions[0]}
+    defaultValue={selectedColor || colourOptions[0]}
     options={colourOptions}
     styles={colourStyles}
     onChange={(e) => onChange({...e, script})}

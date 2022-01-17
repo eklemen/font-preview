@@ -1,9 +1,12 @@
 import React from 'react';
 import RouteManager from './RouteManager';
+import { AppProvider } from './context/app.context';
 
 function App() {
   return (
-    <RouteManager />
+    <AppProvider>
+      <RouteManager />
+    </AppProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -8,8 +8,13 @@ import ProofHeader from '../components/ProofHeader';
 import './proof.scss';
 import CircleProof from '../components/CircleProof';
 import NameInputs from '../components/NameInputs';
+import { appStore } from '../context/app.context';
 
 const Proof = () => {
+  const {
+    handleNameChange,
+    handleColorChange
+  } = useContext(appStore);
   return (
     <>
       <NavTop/>
@@ -17,7 +22,11 @@ const Proof = () => {
         <WavyBanner header={<ProofHeader/>}/>
         <Container>
           <Row>
-            <NameInputs mobile />
+            <NameInputs
+              handleChange={handleNameChange}
+              handleColorChange={handleColorChange}
+              mobile
+            />
           </Row>
           <Row>
             <Col xs={12}>

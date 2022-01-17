@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Textfit } from 'react-textfit';
+import { appStore } from '../context/app.context';
 
 const CircleProof = () => {
+  const {
+    inputVal,
+  } = useContext(appStore);
+  console.log('inputVal-------->', inputVal);
   return (
     <div className="circle">
       <Textfit
@@ -10,7 +15,7 @@ const CircleProof = () => {
         className="first-name"
         throttle={300}
       >
-        Alexandra
+        {inputVal.firstName}
       </Textfit>
       <Textfit
         mode="single"
@@ -18,7 +23,7 @@ const CircleProof = () => {
         className="middle-name"
         throttle={300}
       >
-        Jane
+        {inputVal.middleName}
       </Textfit>
     </div>
   );
