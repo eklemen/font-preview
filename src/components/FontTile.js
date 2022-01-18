@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { Heart, HeartFill } from 'react-bootstrap-icons';
-import classNames from 'classnames';
 
 const FontTile = (
   {

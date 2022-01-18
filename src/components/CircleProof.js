@@ -7,16 +7,18 @@ const CircleProof = () => {
     inputVal,
     scriptColor,
     blockColor,
+    proofFont,
   } = useContext(appStore);
   return (
-    <div className="circle">
+    <div className="circle mx-auto">
       <Textfit
         mode="single"
         forceSingleModeWidth={true}
         className="first-name"
         throttle={300}
         style={{
-          color: scriptColor.color
+          color: scriptColor.color,
+          fontFamily: proofFont.firstName.fontFamily,
         }}
       >
         {inputVal.firstName}
@@ -27,7 +29,8 @@ const CircleProof = () => {
         className="middle-name"
         throttle={300}
         style={{
-          color: blockColor.color
+          color: blockColor.color,
+          fontFamily: proofFont.middleName.fontFamily,
         }}
       >
         {inputVal.middleName}

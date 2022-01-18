@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import classNames from 'classnames';
 import ColorSelect from './ColorSelect';
 import { appStore } from '../context/app.context';
+import FontSelect from './FontSelect';
 
 const NameInputs = (
   {
@@ -15,7 +16,10 @@ const NameInputs = (
     handleColorChange,
     stacked
   }) => {
-  const { scriptColor, blockColor } = useContext(appStore);
+  const {
+    scriptColor,
+    blockColor,
+  } = useContext(appStore);
   const fnClasses = classNames({
     'd-none': mobile && activeTab === 'block'
   }, 'mb-3');
@@ -27,7 +31,7 @@ const NameInputs = (
     'flex-column': stacked
   });
   const secondNameClasses = classNames('mb-4', {
-    'mt-3': stacked,
+    'mt-3': stacked
   });
   return (
     <Form as={Row} className={formClasses}>
@@ -41,6 +45,7 @@ const NameInputs = (
           onChange={handleChange}
         />
         <ColorSelect onChange={handleColorChange} selectedColor={scriptColor} script/>
+        {stacked && <FontSelect name="firstName" />}
       </Form.Group>
       {stacked && <hr className="my-4"/>}
       <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput1">
@@ -53,6 +58,7 @@ const NameInputs = (
           onChange={handleChange}
         />
         <ColorSelect onChange={handleColorChange} selectedColor={blockColor}/>
+        {stacked && <FontSelect name="middleName"/>}
       </Form.Group>
     </Form>
   );
