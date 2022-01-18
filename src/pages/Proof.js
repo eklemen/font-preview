@@ -22,14 +22,15 @@ const Proof = () => {
         <WavyBanner header={<ProofHeader/>}/>
         <Container>
           <Row>
-            <NameInputs
-              handleChange={handleNameChange}
-              handleColorChange={handleColorChange}
-              mobile
-            />
-          </Row>
-          <Row>
-            <Col xs={12}>
+            <Col xs={12} sm={12} md={6}>
+              <NameInputs
+                handleChange={handleNameChange}
+                handleColorChange={handleColorChange}
+                mobile
+                stacked
+              />
+            </Col>
+            <Col xs={12} sm={12} md={6}>
               <CircleProof />
             </Col>
           </Row>

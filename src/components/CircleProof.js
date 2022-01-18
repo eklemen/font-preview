@@ -5,23 +5,30 @@ import { appStore } from '../context/app.context';
 const CircleProof = () => {
   const {
     inputVal,
+    scriptColor,
+    blockColor,
   } = useContext(appStore);
-  console.log('inputVal-------->', inputVal);
   return (
     <div className="circle">
       <Textfit
         mode="single"
-        forceSingleModeWidth={false}
+        forceSingleModeWidth={true}
         className="first-name"
         throttle={300}
+        style={{
+          color: scriptColor.color
+        }}
       >
         {inputVal.firstName}
       </Textfit>
       <Textfit
         mode="single"
-        forceSingleModeWidth={false}
+        forceSingleModeWidth={true}
         className="middle-name"
         throttle={300}
+        style={{
+          color: blockColor.color
+        }}
       >
         {inputVal.middleName}
       </Textfit>

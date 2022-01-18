@@ -25,9 +25,12 @@ const NameInputs = (
   }, 'mb-3')
   const formClasses = classNames(className, {
     'flex-column': stacked
-  })
+  });
+  const secondNameClasses = classNames('mb-4', {
+    'mt-3': stacked,
+  });
   return (
-    <Form as={Row} className={className + ' flex-column'}>
+    <Form as={Row} className={formClasses}>
       <Form.Group as={Col} className={fnClasses} controlId="exampleForm.ControlInput1">
         <Form.Control
           size="lg"
@@ -39,13 +42,14 @@ const NameInputs = (
         />
         <ColorSelect onChange={handleColorChange} selectedColor={scriptColor} script/>
       </Form.Group>
+      {stacked && <hr className="my-4"/>}
       <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput1">
         <Form.Control
           size="lg"
           type="text"
           placeholder="Middle Name"
           name="middleName"
-          className="mb-4"
+          className={secondNameClasses}
           onChange={handleChange}
         />
         <ColorSelect onChange={handleColorChange} selectedColor={blockColor}/>
