@@ -19,6 +19,7 @@ const NameInputs = (
   const {
     scriptColor,
     blockColor,
+    inputVal,
   } = useContext(appStore);
   const fnClasses = classNames({
     'd-none': mobile && activeTab === 'block'
@@ -42,18 +43,20 @@ const NameInputs = (
           placeholder="First Name"
           name="firstName"
           className="mb-4"
+          value={inputVal.firstName}
           onChange={handleChange}
         />
         <ColorSelect onChange={handleColorChange} selectedColor={scriptColor} script/>
         {stacked && <FontSelect name="firstName" />}
       </Form.Group>
       {stacked && <hr className="my-4"/>}
-      <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput1">
+      <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput2">
         <Form.Control
           size="lg"
           type="text"
           placeholder="Middle Name"
           name="middleName"
+          value={inputVal.middleName}
           className={secondNameClasses}
           onChange={handleChange}
         />

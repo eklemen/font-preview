@@ -20,17 +20,10 @@ const AppProvider = ({ children }) => {
     middleName: {},
   });
   const handleNameChange = ({ target }) => {
-    if (!target.value.length) {
-      setInputVal({
-        ...inputVal,
-        [target.name]: 'Your Name'
-      });
-    } else {
-      setInputVal({
-        ...inputVal,
-        [target.name]: target.value
-      });
-    }
+    setInputVal({
+      ...inputVal,
+      [target.name]: target.value
+    });
   };
   const handleColorChange = ({script, ...rest}) => {
     script ? setScriptColor(rest) : setBlockColor(rest);
