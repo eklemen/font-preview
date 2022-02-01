@@ -1,28 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import chroma from 'chroma-js';
-
-
-
-const colourOptions = [
-  { value: 'black', label: 'Black', color: '#000000'},
-  { value: 'blush', label: 'Blush', color: '#e7cdd1' },
-  { value: 'pink', label: 'Pink', color: '#fcd5d9'},
-  { value: 'coral', label: 'Coral', color: '#f86b62' },
-  { value: 'magenta', label: 'Magenta', color: '#9d0058' },
-  { value: 'lilac', label: 'Lilac', color: '#9d9be0' },
-  { value: 'mist', label: 'Mist', color: '#d8f5df' },
-  { value: 'aqua', label: 'Aqua', color: '#5fcee6' },
-  { value: 'turquoise', label: 'Turquoise', color: '#00c2da' },
-  { value: 'french blue', label: 'French Blue', color: '#91bace' },
-  { value: 'navy', label: 'Navy', color: '#001b4a' },
-  { value: 'hunter', label: 'Hunter', color: '#2d443c' },
-  { value: 'apple', label: 'Apple', color: '#becc74' },
-  { value: 'yellow', label: 'yellow', color: '#f3da6e' },
-  { value: 'red', label: 'Red', color: '#cc1722' },
-  { value: 'white', label: 'White', color: '#ffffff' },
-  { value: 'grey', label: 'Grey', color: '#b1adaa' },
-]
+import { colourOptions } from '../constants';
 
 const dot = (color = 'transparent') => ({
   alignItems: 'center',

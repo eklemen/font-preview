@@ -1,5 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { getBlockFonts, getScriptFonts } from '../fontRegistry';
+import { proofBgStains } from '../constants';
 
 const initialState = {};
 const appStore = createContext(initialState);
@@ -19,6 +20,7 @@ const AppProvider = ({ children }) => {
     firstName: {},
     middleName: {},
   });
+  const [proofBg, setProofBg] = useState(proofBgStains[0]);
   const handleNameChange = ({ target }) => {
     setInputVal({
       ...inputVal,
@@ -41,6 +43,7 @@ const AppProvider = ({ children }) => {
     scriptColor, setScriptColor,
     blockColor, setBlockColor,
     proofFont, setProofFont,
+    proofBg, setProofBg,
     handleNameChange,
     handleColorChange,
     onProofFontSelect,

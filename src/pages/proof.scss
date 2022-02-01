@@ -4,6 +4,7 @@
     border: solid 1px black;
     border-radius: 50%;
     position: relative;
+    background-size: contain;
     .first-name {
         width: 335px;
         position: absolute;
@@ -19,5 +20,34 @@
         top: 49%;
         height: 69px;
         text-align: center;
+    }
+}
+
+.bg-option-wrapper {
+    height: 140px;
+    align-items: center;
+    border-radius: 5px;
+    &.selected {
+        border: solid 1px lightgray;
+    }
+    .bg-option-tile {
+        height: 120px;
+        width: 90px;
+        display: flex;
+        flex-direction: column;
+        align-Items: center;
+        text-align: center;
+        &:hover {
+            cursor: pointer;
+        }
+        .option-color {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            background-size: cover;
+        }
+        p {
+            margin: 8px 0 0 0;
+        }
     }
 }
