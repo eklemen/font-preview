@@ -9,11 +9,12 @@ import './proof.scss';
 import CircleProof from '../components/CircleProof';
 import NameInputs from '../components/NameInputs';
 import { appStore } from '../context/app.context';
+import Summary from '../components/Summary';
 
 const Proof = () => {
   const {
     handleNameChange,
-    handleColorChange
+    handleColorChange,
   } = useContext(appStore);
   return (
     <>
@@ -32,6 +33,7 @@ const Proof = () => {
             </Col>
             <Col xs={12} sm={12} md={6}>
               <CircleProof />
+              <Summary />
             </Col>
           </Row>
         </Container>

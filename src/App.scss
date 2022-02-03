@@ -44,6 +44,10 @@
 }
 .btn-pink {
     color: #c96a66 !important;
+    border-color: #c96a66 !important;
+    &:hover {
+        background-color: rgba(201, 106, 102, .1) !important;
+    }
 }
 .text-outline {
     -webkit-text-stroke: 1px #5a5a5a;

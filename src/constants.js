@@ -85,3 +85,18 @@ export const proofBgStains = [
     stain: true
   }
 ];
+
+export const circleStyles = (opt) => {
+  if (opt.label === 'White') console.log(opt)
+  return opt.stain
+    ? {
+      backgroundImage: `url(${opt.color})`,
+      borderRadius: '50%',
+    }
+    : {
+      backgroundColor: opt.color,
+      border: opt.label === 'White' ?
+        '1px solid #aaa' : 'none',
+      borderRadius: '50%',
+    }
+}

@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from 'react';
 import Select from 'react-select';
 import { appStore } from '../context/app.context';
+import Form from 'react-bootstrap/Form';
 
 const groupStyles = {
   display: 'flex',
   alignItems: 'center',
-  justifyContent: 'space-between',
+  justifyContent: 'space-between'
 };
 const groupBadgeStyles = {
   backgroundColor: '#EBECF0',
@@ -17,73 +18,75 @@ const groupBadgeStyles = {
   lineHeight: '1',
   minWidth: 1,
   padding: '0.16666666666667em 0.5em',
-  textAlign: 'center',
+  textAlign: 'center'
 }
 const formatGroupLabel = (data) => (
   <div style={groupStyles}>
     <span style={{
-      fontSize: '1.5em',
+      fontSize: '1.5em'
     }}>{data.label}</span>
-    <hr style={{width: '68%'}}/>
+    <hr style={{ width: '68%' }}/>
     <span style={groupBadgeStyles}>{data.options.length}</span>
   </div>
 );
 
-const FontSelect = ({name}) => {
+const FontSelect = ({ name }) => {
   const {
     scriptFonts,
     blockFonts,
     setProofFont,
-    onProofFontSelect,
+    onProofFontSelect
   } = useContext(appStore);
   const formatForSelectComponent = (arr) => arr.map((
     {
       displayName, ...rest
-    }) => ({label: displayName, value: displayName, ...rest}))
+    }) => ({ label: displayName, value: displayName, ...rest }))
   const scriptMap = formatForSelectComponent(scriptFonts);
   const blockMap = formatForSelectComponent(blockFonts);
   useEffect(() => {
-    const firstName = scriptMap.find(({favorite}) => favorite) || scriptMap[0]
-    const middleName = blockMap.find(({favorite}) => favorite) || blockMap[0]
+    const firstName = scriptMap.find(({ favorite }) => favorite) || scriptMap[0]
+    const middleName = blockMap.find(({ favorite }) => favorite) || blockMap[0]
     setProofFont({
       firstName,
-      middleName,
+      middleName
     });
   }, []);
   const groupedOptions = [
     {
       label: 'Favorites',
-      options: [...scriptMap, ...blockMap].filter(({favorite}) => favorite),
+      options: [...scriptMap, ...blockMap].filter(({ favorite }) => favorite)
     },
     {
       label: 'Script Fonts',
-      options: scriptMap,
+      options: scriptMap
     },
     {
       label: 'Block Fonts',
-      options: blockMap,
-    },
+      options: blockMap
+    }
   ];
   return (
-    <Select
-      options={groupedOptions}
-      className="mt-4"
-      defaultValue={
-        name === 'firstName'
-          ? (scriptMap.find(({favorite}) => favorite) || scriptMap[0])
-          : (blockMap.find(({favorite}) => favorite) || blockMap[0])
-      }
-      onChange={(e) => onProofFontSelect(e, name)}
-      formatGroupLabel={formatGroupLabel}
-      styles={{
-        option: (styles, { data }) => ({
-          ...styles,
-          fontFamily: data.fontFamily,
-          fontSize: `${data.size*0.50}em`,
-          ...data.styles
-        })
-      }}
-    />
+    <>
+      <Form.Label className="mt-4">Font</Form.Label>
+      <Select
+        options={groupedOptions}
+        defaultValue={
+          name === 'firstName'
+            ? (scriptMap.find(({ favorite }) => favorite) || scriptMap[0])
+            : (blockMap.find(({ favorite }) => favorite) || blockMap[0])
+        }
+        onChange={(e) => onProofFontSelect(e, name)}
+        formatGroupLabel={formatGroupLabel}
+        styles={{
+          option: (styles, { data }) => ({
+            ...styles,
+            fontFamily: data.fontFamily,
+            fontSize: `${data.size * 0.50}em`,
+            ...data.styles
+          })
+        }}
+      />
+    </>
   );
 };
 

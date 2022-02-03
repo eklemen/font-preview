@@ -2,27 +2,23 @@ import React, { useContext } from 'react';
 import Col from 'react-bootstrap/Col';
 import classNames from 'classnames';
 import { appStore } from '../context/app.context';
+import { circleStyles } from '../constants';
 
-const StainOptionTile = ({ colorOption }) => {
+const StainOptionTile = ({ colorOption, closeModal }) => {
   const { proofBg, setProofBg } = useContext(appStore);
-  const optStyles = colorOption.stain
-    ? {
-      backgroundImage: `url(${colorOption.color})`
-    }
-    : {
-      backgroundColor: colorOption.color,
-      border: colorOption.value === 'white' ?
-        '1px solid #aaa' : 'none'
-    };
+
   const wrapperClasses = classNames({
     selected: proofBg.label === colorOption.label
   }, 'd-flex justify-content-center bg-option-wrapper')
   return (
-    <Col xs={3} lg={2} className={wrapperClasses} onClick={() => setProofBg(colorOption)}>
+    <Col xs={3} lg={2} className={wrapperClasses} onClick={() => {
+      setProofBg(colorOption);
+      closeModal();
+    }}>
       <div className="bg-option-tile">
         <div
           className="option-color"
-          style={optStyles}
+          style={circleStyles(colorOption)}
         />
         <p>{colorOption.label}</p>
       </div>

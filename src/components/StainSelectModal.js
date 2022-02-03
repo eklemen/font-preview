@@ -1,20 +1,41 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Row from 'react-bootstrap/Row';
-import { proofBgStains, colourOptions } from '../constants';
+import { ChevronDown } from 'react-bootstrap-icons';
+import { proofBgStains, colourOptions, circleStyles } from '../constants';
 import StainOptionTile from './StainOptionTile';
+import { appStore } from '../context/app.context';
+import Col from 'react-bootstrap/Col';
 
 const StainSelectModal = () => {
-  const [lgShow, setLgShow] = React.useState(false);
+  const [showModal, setShowModal] = React.useState(false);
 
+  const { proofBg } = useContext(appStore);
   return (
     <>
-      <Button onClick={() => setLgShow(true)}>Large modal</Button>
+      <Row className="justify-content-center mb-3">
+        <Col xs={12} style={{ maxWidth: 225 }} className="d-flex justify-content-center flex-column">
+          <p className="m-0 font-18 text-center">Circle Color</p>
+          <Button
+            variant="outline-primary"
+            onClick={() => setShowModal(true)}
+            className="d-flex justify-content-between align-items-center btn-pink"
+          >
+            <div style={{
+              height: 20,
+              width: 20,
+              ...circleStyles(proofBg)
+            }}/>
+            <span>{proofBg.label}</span>
+            <ChevronDown/>
+          </Button>
+        </Col>
+      </Row>
       <Modal
         size="lg"
-        show={lgShow}
-        onHide={() => setLgShow(false)}
+        show={showModal}
+        onHide={() => setShowModal(false)}
         aria-labelledby="example-modal-sizes-title-lg"
       >
         <Modal.Header closeButton>
@@ -28,7 +49,9 @@ const StainSelectModal = () => {
             {proofBgStains.map((o) => (
               <StainOptionTile
                 key={o.value}
-                colorOption={o} />
+                setModalShow
+                closeModal={() => setShowModal(false)}
+                colorOption={o}/>
             ))}
           </Row>
           <Row>
@@ -36,7 +59,9 @@ const StainSelectModal = () => {
             {colourOptions.map((o) => (
               <StainOptionTile
                 key={o.value}
-                colorOption={o} />
+                setModalShow
+                closeModal={() => setShowModal(false)}
+                colorOption={o}/>
             ))}
           </Row>
         </Modal.Body>

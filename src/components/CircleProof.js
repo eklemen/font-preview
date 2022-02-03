@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Textfit } from 'react-textfit';
 import { appStore } from '../context/app.context';
 import StainSelectModal from './StainSelectModal';
+import { circleStyles } from '../constants';
 
 const CircleProof = () => {
   const {
@@ -11,25 +12,16 @@ const CircleProof = () => {
     proofFont,
     proofBg,
   } = useContext(appStore);
-  const bgStyles = proofBg.stain
-    ? {
-      backgroundImage: `url(${proofBg.color})`
-    }
-    : {
-      backgroundColor: proofBg.color,
-      border: proofBg.value === 'white' ?
-        '1px solid #aaa' : 'none'
-    };
   return (
     <>
       <StainSelectModal />
       <div className="circle mx-auto"
-           style={bgStyles}
+           style={circleStyles(proofBg)}
       >
         <Textfit
           mode="single"
           forceSingleModeWidth={true}
-          className="first-name"
+          className="first-name text-shadow"
           throttle={300}
           style={{
             color: scriptColor.color,
@@ -41,7 +33,7 @@ const CircleProof = () => {
         <Textfit
           mode="single"
           forceSingleModeWidth={true}
-          className="middle-name"
+          className="middle-name text-shadow"
           throttle={300}
           style={{
             color: blockColor.color,

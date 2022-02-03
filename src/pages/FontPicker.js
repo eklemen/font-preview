@@ -82,7 +82,7 @@ const FontPicker = () => {
             <Col xs={6}>
               <h3>Script Fonts</h3>
             </Col>
-            <Col xs={6}>
+            <Col xs={6} className="p-0">
               <h3>Block Fonts</h3>
             </Col>
           </Row>
