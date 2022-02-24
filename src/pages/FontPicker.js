@@ -67,8 +67,8 @@ const FontPicker = () => {
         handleFavorite={handleFavorite}
       />));
   }
-  const visibleXs = 'd-flex d-sm-none';
-  const visibleAboveXs = 'd-none d-sm-flex';
+  const visibleSm = 'd-flex d-md-none';
+  const visibleAboveSm = 'd-none d-md-flex';
   return (
     <>
       <NavTop/>
@@ -78,7 +78,7 @@ const FontPicker = () => {
       <div className="mb-5 pb-5">
         <WavyBanner header={<FontPreviewHeader />} />
         <Container>
-          <Row className={visibleAboveXs}>
+          <Row className={visibleAboveSm}>
             <Col xs={6}>
               <h3>Script Fonts</h3>
             </Col>
@@ -88,23 +88,23 @@ const FontPicker = () => {
           </Row>
           <Row>
             <NameInputs
-              className={visibleAboveXs}
+              className={visibleAboveSm}
               handleChange={handleNameChange}
               handleColorChange={handleColorChange}/>
             <NameInputs
-              className={visibleXs}
+              className={visibleSm}
               mobile
               activeTab={activeTab}
               handleChange={handleNameChange}
               handleColorChange={handleColorChange}
             />
           </Row>
-          <Row className={visibleAboveXs}>
+          <Row className={visibleAboveSm}>
             <Col xs={6}>
               <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
             </Col>
           </Row>
-          <Row className={visibleAboveXs}>
+          <Row className={visibleAboveSm}>
             <Col xs={6}>
               {renderList()}
             </Col>
@@ -114,7 +114,7 @@ const FontPicker = () => {
           </Row>
         </Container>
         <Container>
-          <Row className={visibleXs}>
+          <Row className={visibleSm}>
             <Col>
               <Tabs
                 activeKey={activeTab}

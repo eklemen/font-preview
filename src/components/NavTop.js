@@ -18,7 +18,7 @@ const NavTop = () => {
             Fonts
           </Nav.Link>
           <Nav.Link className="nav-item" as={Link} to="/proof">
-            Proof Generator
+            Mockup Generator
           </Nav.Link>
           <Nav.Link className="nav-item" target="_blank" href="https://www.etsy.com/shop/PetalAndGrainShop">
             Etsy Shop

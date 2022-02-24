@@ -49,7 +49,7 @@ const NameInputs = (
         {stacked && <FontSelect name="firstName" />}
       </Form.Group>
       {stacked && <hr className="my-4"/>}
-      <Form.Group as={Col} className={lnClasses} style={{}} controlId="exampleForm.ControlInput2">
+      <Form.Group as={Col} className={lnClasses} controlId="exampleForm.ControlInput2">
         <Form.Label>Middle Name</Form.Label>
         <Form.Control
           size="lg"

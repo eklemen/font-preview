@@ -3,6 +3,7 @@ import Container from 'react-bootstrap/Container';
 import ShowFavoriteButton from './ShowFavoriteButton';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
+import { Link } from 'react-router-dom';
 
 const NavBottom = ({ showFaves, setShowFaves }) => {
   const referrer = useRef(document.referrer);
@@ -20,6 +21,15 @@ const NavBottom = ({ showFaves, setShowFaves }) => {
             Go To Etsy Listing
           </Button>
         }
+        <Link
+          style={{
+            marginRight: '8px'
+          }}
+          className="mb-2 btn btn-outline-primary"
+          role="button"
+          to="proof">
+          View Mockup Generator
+        </Link>
         <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
       </Container>
     </Navbar>
