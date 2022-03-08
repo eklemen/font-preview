@@ -58,3 +58,31 @@
 .text-shadow {
     text-shadow: 0 0 1px rgba(0, 0, 0, .35);
 }
+
+.rect-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 0 2.5em;
+    width: 80%;
+    margin: auto auto 36px auto;
+    .btn-light {
+        background-color: #fff;
+        border-style: dashed;
+    }
+    .rect {
+        width: auto;
+        text-align: center;
+        margin-bottom: 1em;
+        .rect-svg {
+            max-width: 200px;
+            rect {
+                fill: rgb(255,255,255);
+                stroke-width: 3;
+                stroke: rgb(0,0,0);
+            }
+        }
+    }
+}

@@ -1,6 +1,6 @@
 import React, { createContext, useState } from 'react';
 import { getBlockFonts, getScriptFonts } from '../fontRegistry';
-import { proofBgStains } from '../constants';
+import { PROOF, proofBgStains } from '../constants';
 
 const initialState = {};
 const appStore = createContext(initialState);
@@ -21,6 +21,13 @@ const AppProvider = ({ children }) => {
     middleName: {},
   });
   const [proofBg, setProofBg] = useState(proofBgStains[0]);
+  const [carouselIndex, setCarouselIndex] = useState(0);
+  const [proofAttributes, setProofAttributes] = useState({
+    boardShape: PROOF.shape.circle,
+    boardColor: proofBgStains[0],
+    hasFlowers: false,
+    furthestIndex: 0,
+  });
   const handleNameChange = ({ target }) => {
     setInputVal({
       ...inputVal,
@@ -44,6 +51,8 @@ const AppProvider = ({ children }) => {
     blockColor, setBlockColor,
     proofFont, setProofFont,
     proofBg, setProofBg,
+    proofAttributes, setProofAttributes,
+    carouselIndex, setCarouselIndex,
     handleNameChange,
     handleColorChange,
     onProofFontSelect,

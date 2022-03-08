@@ -100,3 +100,10 @@ export const circleStyles = (opt) => {
       borderRadius: '50%',
     }
 }
+
+export const PROOF = {
+  shape: {
+    circle: 'circle',
+    rectangle: 'rectangle'
+  },
+};

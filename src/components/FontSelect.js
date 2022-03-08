@@ -50,6 +50,7 @@ const FontSelect = ({ name }) => {
       firstName,
       middleName
     });
+    // eslint-disable-next-line
   }, []);
   const groupedOptions = [
     {
