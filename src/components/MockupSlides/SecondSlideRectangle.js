@@ -1,42 +1,26 @@
 import React, { useContext } from 'react';
 import { appStore } from '../../context/app.context';
 import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
+import grayStain from '../../assets/rectangleBoards/graystain.jpg';
+import greenStain from '../../assets/rectangleBoards/greenstain.jpg';
 
 const SecondSlideRectangle = () => {
   const { carouselIndex, setCarouselIndex } = useContext(appStore);
+  const handleColorComboSelection = (color) => setCarouselIndex(carouselIndex + 1);
   return (
     <Col xs={12}>
       <div className="rect-wrapper">
-        <Button variant="light" onClick={({target}) => {
-          console.log('clicked-------->', target);
-        }}>
+        <Button variant="light" onClick={() => handleColorComboSelection('blue')}>
           <div className="rect">
-            <svg viewBox="0 0 200 85" width="100%" height="100%" className="rect-svg">
-              <rect width="200" height="85"/>
-            </svg>
-            <p className="mb-0">Blue/Mocha</p>
+            <img className="w-100" src={grayStain} alt="rectangle board option"/>
+            <p className="mb-0">Gray/Stain</p>
           </div>
         </Button>
-        <Button variant="light" onClick={({target}) => {
-          console.log('clicked-------->', target);
-        }}>
+        <Button variant="light" onClick={() => handleColorComboSelection('blue')}>
           <div className="rect">
-            <svg viewBox="0 0 200 85" width="100%" height="100%" className="rect-svg">
-              <rect width="200" height="85"/>
-            </svg>
-            <p className="mb-0">Blue/Mocha</p>
-          </div>
-        </Button>
-        <Button variant="light" onClick={({target}) => {
-          console.log('clicked-------->', target);
-        }}>
-          <div className="rect">
-            <svg viewBox="0 0 200 85" width="100%" height="100%" className="rect-svg">
-              <rect width="200" height="85"/>
-            </svg>
-            <p className="mb-0">Blue/Mocha</p>
+            <img className="w-100" src={greenStain}  alt="rectangle board option"/>
+            <p className="mb-0">Green/Stain</p>
           </div>
         </Button>
       </div>

@@ -35,7 +35,7 @@ const SecondSlideCircle = () => {
         <h4>Without Flowers</h4>
       </Col>
 
-      <Col xs={12} sm={12} md={4} className="d-flex align-items-center flex-column mb-5">
+      <Col xs={12} sm={12} md={4} className="d-flex align-items-center flex-column">
         <Button
           variant="light"
           name="flowers"
