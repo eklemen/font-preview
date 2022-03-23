@@ -28,6 +28,13 @@ const AppProvider = ({ children }) => {
     hasFlowers: false,
     furthestIndex: 0,
   });
+  const updateProofAttributeAndNextSlide = (attr={}) => {
+    setProofAttributes({
+      ...proofAttributes,
+      ...attr
+    });
+    setCarouselIndex(carouselIndex + 1);
+  };
   const handleNameChange = ({ target }) => {
     setInputVal({
       ...inputVal,
@@ -56,6 +63,7 @@ const AppProvider = ({ children }) => {
     handleNameChange,
     handleColorChange,
     onProofFontSelect,
+    updateProofAttributeAndNextSlide,
   }}>
     {children}
   </Provider>;

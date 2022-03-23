@@ -2,20 +2,15 @@ import React, { useContext } from 'react';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
 import { appStore } from '../../context/app.context';
+import CircleShiplap from '../../assets/shiplapCircles/CircleShiplap';
+import CircleWithFlowers from '../../assets/shiplapCircles/CircleWithFlowers';
 
 const SecondSlideCircle = () => {
   const {
-    carouselIndex,
-    setCarouselIndex,
-    setProofAttributes,
-    proofAttributes
+    updateProofAttributeAndNextSlide,
   } = useContext(appStore);
   const handleFlowerOption = (hasFlowers=false) => {
-    setProofAttributes({
-      ...proofAttributes,
-      hasFlowers,
-    })
-    setCarouselIndex(carouselIndex+1);
+    updateProofAttributeAndNextSlide({hasFlowers})
   }
   return (
     <>
@@ -23,14 +18,10 @@ const SecondSlideCircle = () => {
         <Button
           variant="light"
           name="no-flowers"
+          style={{width: '270px', height: '270px', backgroundColor: '#fff'}}
           onClick={handleFlowerOption}
-          style={{
-            border: 'solid 3px black',
-            borderRadius: '50%',
-            height: '150px',
-            width: '150px'
-          }}
         >
+          <CircleShiplap height="100%" width="100%"/>
         </Button>
         <h4>Without Flowers</h4>
       </Col>
@@ -39,14 +30,10 @@ const SecondSlideCircle = () => {
         <Button
           variant="light"
           name="flowers"
+          style={{width: '270px', height: '270px', backgroundColor: '#fff'}}
           onClick={() => handleFlowerOption(true)}
-          style={{
-            border: 'solid 3px black',
-            borderRadius: '50%',
-            height: '150px',
-            width: '150px'
-          }}
         >
+          <CircleWithFlowers height="100%" width="100%"/>
         </Button>
         <h4>With Flowers</h4>
       </Col>

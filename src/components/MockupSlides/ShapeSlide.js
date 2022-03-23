@@ -10,18 +10,10 @@ import blankRectangleBoard from '../../assets/rectangleBoards/blankRectangle.png
 
 const ShapeSlide = forwardRef(({ ...rest }, ref) => {
   const {
-    proofAttributes,
-    setProofAttributes,
-    carouselIndex,
-    setCarouselIndex,
+    updateProofAttributeAndNextSlide,
   } = useContext(appStore);
   const handleShape = (boardShape) => {
-    setProofAttributes({
-      ...proofAttributes,
-      boardShape,
-      furthestIndex: carouselIndex+1 > proofAttributes.furthestIndex ? carouselIndex+1 : proofAttributes.furthestIndex,
-    })
-    setCarouselIndex(carouselIndex+1);
+    updateProofAttributeAndNextSlide({boardShape})
   };
   return (
     <Carousel.Item ref={ref} {...rest}>
@@ -55,6 +47,7 @@ const ShapeSlide = forwardRef(({ ...rest }, ref) => {
             <Button
               variant="light"
               name="rectangle"
+              style={{maxWidth: '350px', backgroundColor: '#fff'}}
               onClick={() => handleShape(PROOF.shape.rectangle)}
             >
               <img className="w-100" src={blankRectangleBoard}  alt="rectangle board option"/>

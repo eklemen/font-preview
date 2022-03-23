@@ -106,4 +106,8 @@ export const PROOF = {
     circle: 'circle',
     rectangle: 'rectangle'
   },
+  rectangleColors: {
+    green: 'green',
+    gray: 'gray'
+  }
 };
