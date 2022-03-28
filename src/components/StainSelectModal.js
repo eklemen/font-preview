@@ -7,15 +7,21 @@ import { proofBgStains, colourOptions, circleStyles } from '../constants';
 import StainOptionTile from './StainOptionTile';
 import { appStore } from '../context/app.context';
 import Col from 'react-bootstrap/Col';
+import FormCheck from 'react-bootstrap/FormCheck';
 
 const StainSelectModal = () => {
   const [showModal, setShowModal] = React.useState(false);
 
-  const { proofBg } = useContext(appStore);
+  const {
+    proofBg,
+    proofAttributes,
+    updateProofAttributeAndNextSlide
+  } = useContext(appStore);
+  console.log('on stain select modal-------->', proofAttributes.hasFlowers);
   return (
     <>
       <Row className="justify-content-center mb-3">
-        <Col xs={12} style={{ maxWidth: 225 }} className="d-flex justify-content-center flex-column">
+        <Col xs={12} sm={6} style={{ maxWidth: 225 }} className="d-flex justify-content-center flex-column">
           <p className="m-0 font-18 text-center">Circle Color</p>
           <Button
             variant="outline-primary"
@@ -30,6 +36,19 @@ const StainSelectModal = () => {
             <span>{proofBg.label}</span>
             <ChevronDown/>
           </Button>
+        </Col>
+        <Col xs={12} sm={6} className="d-flex align-items-center justify-content-center">
+          <FormCheck
+            type="checkbox"
+            id="has-flowers-checkbox"
+            label="Has Flowers"
+            checked={proofAttributes.hasFlowers}
+            onChange={(e) => {
+              console.log('e.target.checked-------->', e.target.checked);
+              updateProofAttributeAndNextSlide({ hasFlowers: !proofAttributes.hasFlowers })
+            }}
+            style={{ marginTop: '24px' }}
+          />
         </Col>
       </Row>
       <Modal

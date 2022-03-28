@@ -2,7 +2,7 @@ import React, { forwardRef, useContext } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import Carousel from 'react-bootstrap/Carousel';
+import CarouselItem from 'react-bootstrap/CarouselItem';
 import { appStore } from '../../context/app.context';
 import { PROOF } from '../../constants';
 import CircleShiplap from '../../assets/shiplapCircles/CircleShiplap';
@@ -16,7 +16,7 @@ const ShapeSlide = forwardRef(({ ...rest }, ref) => {
     updateProofAttributeAndNextSlide({boardShape})
   };
   return (
-    <Carousel.Item ref={ref} {...rest}>
+    <CarouselItem ref={ref} {...rest}>
       <div
         className="w-100"
         style={{
@@ -59,7 +59,7 @@ const ShapeSlide = forwardRef(({ ...rest }, ref) => {
       {/*<Carousel.Caption>*/}
       {/*  */}
       {/*</Carousel.Caption>*/}
-    </Carousel.Item>
+    </CarouselItem>
   );
 });
 

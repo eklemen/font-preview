@@ -1,17 +1,17 @@
 import React, { forwardRef, useContext } from 'react';
 import Row from 'react-bootstrap/Row';
-import Carousel from 'react-bootstrap/Carousel';
+import CarouselItem from 'react-bootstrap/CarouselItem';
+import Col from 'react-bootstrap/Col';
 import { appStore } from '../../context/app.context';
 import { PROOF } from '../../constants';
 import SecondSlideCircle from './SecondSlideCircle';
 import SecondSlideRectangle from './SecondSlideRectangle';
-import Col from 'react-bootstrap/Col';
 
 const SecondSlide = forwardRef(({ ...rest }, ref) => {
   const { proofAttributes } = useContext(appStore);
   const isCircle = proofAttributes.boardShape === PROOF.shape.circle;
   return (
-    <Carousel.Item ref={ref} {...rest}>
+    <CarouselItem ref={ref} {...rest}>
       <div
         className="w-100"
         style={{
@@ -41,7 +41,7 @@ const SecondSlide = forwardRef(({ ...rest }, ref) => {
           }
         </Row>
       </div>
-    </Carousel.Item>
+    </CarouselItem>
   );
 });
 

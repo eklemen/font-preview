@@ -92,13 +92,13 @@ const CircleShiplap = (props) => {
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
-      viewBox="0 0 500 500"
+      viewBox="49 49 402 402"
       {...props}
     >
       <path
         style={{
           stroke: "#000",
-          strokeWidth: 1,
+          strokeWidth: 2,
           strokeDasharray: "none",
           strokeLinecap: "butt",
           strokeDashoffset: 0,

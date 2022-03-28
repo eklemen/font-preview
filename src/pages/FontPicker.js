@@ -23,8 +23,6 @@ const FontPicker = () => {
     blockFonts, setBlockFonts,
     scriptColor,
     blockColor,
-    handleNameChange,
-    handleColorChange
   } = useContext(appStore);
   const handleFavorite = ({ script, fontFamily }) => {
     if (Boolean(script)) {
@@ -45,7 +43,7 @@ const FontPicker = () => {
   };
   const renderList = (scripts = true) => {
     let list;
-    let color = { value: 'black', label: 'Black', color: '#000000'};
+    let color = { value: 'black', label: 'Black', color: '#000000' };
     if (scripts) {
       color = scriptColor;
       list = showFaves ?
@@ -76,7 +74,7 @@ const FontPicker = () => {
         showFaves={showFaves}
         setShowFaves={setShowFaves}/>
       <div className="mb-5 pb-5">
-        <WavyBanner header={<FontPreviewHeader />} />
+        <WavyBanner header={<FontPreviewHeader/>}/>
         <Container>
           <Row className={visibleAboveSm}>
             <Col xs={6}>
@@ -89,14 +87,11 @@ const FontPicker = () => {
           <Row>
             <NameInputs
               className={visibleAboveSm}
-              handleChange={handleNameChange}
-              handleColorChange={handleColorChange}/>
+            />
             <NameInputs
               className={visibleSm}
               mobile
               activeTab={activeTab}
-              handleChange={handleNameChange}
-              handleColorChange={handleColorChange}
             />
           </Row>
           <Row className={visibleAboveSm}>

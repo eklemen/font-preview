@@ -3,6 +3,8 @@ import { Textfit } from 'react-textfit';
 import { appStore } from '../context/app.context';
 import StainSelectModal from './StainSelectModal';
 import { circleStyles } from '../constants';
+import CircleShiplap from '../assets/shiplapCircles/CircleShiplap';
+import CircleShiplapWithFlowers from '../assets/shiplapCircles/CircleWithFlowers';
 
 const CircleProof = () => {
   const {
@@ -11,6 +13,7 @@ const CircleProof = () => {
     blockColor,
     proofFont,
     proofBg,
+    proofAttributes,
   } = useContext(appStore);
   return (
     <>
@@ -18,6 +21,11 @@ const CircleProof = () => {
       <div className="circle mx-auto"
            style={circleStyles(proofBg)}
       >
+        {
+          proofAttributes.hasFlowers
+          ? <CircleShiplapWithFlowers />
+          : <CircleShiplap />
+        }
         <Textfit
           mode="single"
           forceSingleModeWidth={true}

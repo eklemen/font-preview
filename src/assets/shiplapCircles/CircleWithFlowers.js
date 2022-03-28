@@ -3,7 +3,7 @@ import * as React from "react"
 const CircleWithFlowers = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 1508 1350"
+    viewBox="55 23 1305 1305"
     xmlSpace="preserve"
     height="100%"
     width="100%"
@@ -13,7 +13,7 @@ const CircleWithFlowers = (props) => (
   >
     <style>
       {
-        ".st0,.st1{stroke:#000}.st0{fill:none;stroke-width:5px}.st1{fill:#231f20;stroke-miterlimit:10;stroke-width:2}"
+        ".st0,.st1{stroke:rgba(77, 77, 77, 0.5)}.st0{fill:none;stroke-width:5px}.st1{fill:#231f20;stroke-miterlimit:10;stroke-width:2}"
       }
     </style>
     <g id="layer1" transform="translate(0 232.167)">

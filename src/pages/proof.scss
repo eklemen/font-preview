@@ -1,25 +1,39 @@
 .circle {
     height: 400px;
     width: 400px;
-    border: solid 1px black;
-    border-radius: 50%;
+    //border: solid 1px black;
+    //border-radius: 50%;
     position: relative;
-    background-size: contain;
-    .first-name {
-        width: 335px;
-        position: absolute;
-        left: 8%;
-        top: 23%;
-        height: 100px;
-        text-align: center;
+    //background-size: contain;
+}
+.rectangle-proof-wrapper {
+    width: 400px;
+    height: 200px;
+    position: relative;
+    border: 1px solid black;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.first-name {
+    width: 335px;
+    position: absolute;
+    left: 8%;
+    top: 23%;
+    height: 100px;
+    text-align: center;
+    &.rectangle-proof {
+        top: 8%;
     }
-    .middle-name {
-        width: 196px;
-        position: absolute;
-        left: 42%;
-        top: 49%;
-        height: 69px;
-        text-align: center;
+}
+.middle-name {
+    width: 196px;
+    position: absolute;
+    left: 42%;
+    top: 49%;
+    height: 69px;
+    text-align: center;
+    &.rectangle-proof {
+        top: 55%;
     }
 }
 

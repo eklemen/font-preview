@@ -19,7 +19,7 @@ const SecondSlideCircle = () => {
           variant="light"
           name="no-flowers"
           style={{width: '270px', height: '270px', backgroundColor: '#fff'}}
-          onClick={handleFlowerOption}
+          onClick={() => handleFlowerOption(false)}
         >
           <CircleShiplap height="100%" width="100%"/>
         </Button>

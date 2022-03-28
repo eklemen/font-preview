@@ -28,6 +28,7 @@ const AppProvider = ({ children }) => {
     hasFlowers: false,
     furthestIndex: 0,
   });
+  const [hideWizard, setHideWizard] = useState(false);
   const updateProofAttributeAndNextSlide = (attr={}) => {
     setProofAttributes({
       ...proofAttributes,
@@ -60,6 +61,7 @@ const AppProvider = ({ children }) => {
     proofBg, setProofBg,
     proofAttributes, setProofAttributes,
     carouselIndex, setCarouselIndex,
+    hideWizard, setHideWizard,
     handleNameChange,
     handleColorChange,
     onProofFontSelect,
