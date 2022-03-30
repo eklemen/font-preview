@@ -31,7 +31,7 @@ const Proof = () => {
           {
             hideWizard
               ? <Row>
-                <Col xs={12} sm={12} md={6}>
+                <Col xs={12} sm={12} lg={6}>
                   <NameInputs
                     handleChange={handleNameChange}
                     handleColorChange={handleColorChange}
@@ -39,31 +39,14 @@ const Proof = () => {
                     stacked
                   />
                 </Col>
-                <Col xs={12} sm={12} md={6}>
-                  {
-                    proofAttributes.boardShape === PROOF.shape.circle
-                    ? <CircleProof />
-                    : <RectangleProof />
-                  }
-                  {/*<Summary />*/}
-                </Col>
+                {
+                  proofAttributes.boardShape === PROOF.shape.circle
+                    ? <Col xs={12} lg={6}><CircleProof /></Col>
+                    : <Col xs={12} lg={6}><RectangleProof /></Col>
+                }
               </Row>
               : <MockupWizard />
           }
-          {/*<Row>*/}
-          {/*  <Col xs={12} sm={12} md={6}>*/}
-          {/*    <NameInputs*/}
-          {/*      handleChange={handleNameChange}*/}
-          {/*      handleColorChange={handleColorChange}*/}
-          {/*      mobile*/}
-          {/*      stacked*/}
-          {/*    />*/}
-          {/*  </Col>*/}
-          {/*  <Col xs={12} sm={12} md={6}>*/}
-          {/*    <CircleProof />*/}
-          {/*    <Summary />*/}
-          {/*  </Col>*/}
-          {/*</Row>*/}
         </Container>
       </div>
     </>

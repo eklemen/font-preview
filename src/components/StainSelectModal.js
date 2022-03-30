@@ -8,6 +8,7 @@ import StainOptionTile from './StainOptionTile';
 import { appStore } from '../context/app.context';
 import Col from 'react-bootstrap/Col';
 import FormCheck from 'react-bootstrap/FormCheck';
+import ShapeSelectRadios from './ShapeSelectRadios';
 
 const StainSelectModal = () => {
   const [showModal, setShowModal] = React.useState(false);
@@ -17,15 +18,19 @@ const StainSelectModal = () => {
     proofAttributes,
     updateProofAttributeAndNextSlide
   } = useContext(appStore);
-  console.log('on stain select modal-------->', proofAttributes.hasFlowers);
   return (
     <>
       <Row className="justify-content-center mb-3">
-        <Col xs={12} sm={6} style={{ maxWidth: 225 }} className="d-flex justify-content-center flex-column">
-          <p className="m-0 font-18 text-center">Circle Color</p>
+        <Col xs={12} className="d-flex justify-content-center flex-column">
+          <ShapeSelectRadios />
+          <div />
+        </Col>
+        <Col xs={12} sm={6}>
+          <p className="m-0 font-18">Circle Color</p>
           <Button
             variant="outline-primary"
             onClick={() => setShowModal(true)}
+            style={{ maxWidth: 225 }}
             className="d-flex justify-content-between align-items-center btn-pink"
           >
             <div style={{
@@ -37,14 +42,13 @@ const StainSelectModal = () => {
             <ChevronDown/>
           </Button>
         </Col>
-        <Col xs={12} sm={6} className="d-flex align-items-center justify-content-center">
+        <Col xs={12} sm={6}>
           <FormCheck
             type="checkbox"
             id="has-flowers-checkbox"
             label="Has Flowers"
             checked={proofAttributes.hasFlowers}
-            onChange={(e) => {
-              console.log('e.target.checked-------->', e.target.checked);
+            onChange={() => {
               updateProofAttributeAndNextSlide({ hasFlowers: !proofAttributes.hasFlowers })
             }}
             style={{ marginTop: '24px' }}
