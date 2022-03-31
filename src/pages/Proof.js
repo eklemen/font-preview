@@ -2,7 +2,6 @@ import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
 import NavTop from '../components/NavTop';
 import WavyBanner from '../components/WavyBanner';
 import ProofHeader from '../components/ProofHeader';
@@ -11,7 +10,6 @@ import MockupWizard from '../components/MockupWizard';
 import CircleProof from '../components/CircleProof';
 import NameInputs from '../components/NameInputs';
 import { appStore } from '../context/app.context';
-import Summary from '../components/Summary';
 import { PROOF } from '../constants';
 import RectangleProof from '../components/RectangleProof';
 

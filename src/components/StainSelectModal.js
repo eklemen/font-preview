@@ -49,7 +49,7 @@ const StainSelectModal = () => {
             label="Has Flowers"
             checked={proofAttributes.hasFlowers}
             onChange={() => {
-              updateProofAttributeAndNextSlide({ hasFlowers: !proofAttributes.hasFlowers })
+              updateProofAttributeAndNextSlide({ hasFlowers: !proofAttributes.hasFlowers }, false)
             }}
             style={{ marginTop: '24px' }}
           />

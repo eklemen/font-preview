@@ -29,11 +29,12 @@ const AppProvider = ({ children }) => {
     furthestIndex: 0,
   });
   const [hideWizard, setHideWizard] = useState(false);
-  const updateProofAttributeAndNextSlide = (attr={}) => {
+  const updateProofAttributeAndNextSlide = (attr={}, setIndex = true) => {
     setProofAttributes({
       ...proofAttributes,
       ...attr
     });
+    setIndex &&
     setCarouselIndex(carouselIndex + 1);
   };
   const handleNameChange = ({ target }) => {

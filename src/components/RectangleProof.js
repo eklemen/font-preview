@@ -45,7 +45,7 @@ const RectangleProof = () => {
             onChange={(e) => {
               updateProofAttributeAndNextSlide({
                 boardColor: e.value
-              })
+              }, false)
             }}
 
             options={[

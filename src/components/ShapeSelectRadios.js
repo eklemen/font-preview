@@ -20,7 +20,7 @@ const ShapeSelectRadios = () => {
         onChange={() => {
           updateProofAttributeAndNextSlide({
             boardShape: shape.circle
-          })
+          }, false)
         }}
         checked={proofAttributes.boardShape === shape.circle}
         label="Circle"
@@ -34,7 +34,7 @@ const ShapeSelectRadios = () => {
         onChange={() => {
           updateProofAttributeAndNextSlide({
             boardShape: shape.rectangle
-          })
+          }, false)
         }}
         checked={proofAttributes.boardShape === shape.rectangle}
         label="Rectangle"
