@@ -9,7 +9,7 @@ const DisclaimerSlide = forwardRef(({ ...rest }, ref) => {
   } = useContext(appStore);
   return (
     <CarouselItem ref={ref} {...rest}>
-      <div className="d-flex flex-column justify-content-center align-items-center" style={{height: '335px'}}>
+      <div className="d-flex flex-column justify-content-center align-items-center disclaimer-slide" style={{height: '335px'}}>
         <div className="text-center w-75 mb-2">
           <h5 className="text-center">Creating a mockup online is for illustrative purposes only. This is to give you a general idea of what fonts and colors look like together. This may not reflect the actual product. If you would like an official proof, I would be happy to provide one after an order is placed.</h5>
           <small>By clicking the button below you are verifying you have read and understand the disclaimer above.</small>

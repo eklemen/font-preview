@@ -8,12 +8,23 @@ import { Link } from 'react-router-dom';
 const NavTop = () => {
   return (
     <Navbar className="top-nav">
-      <Container>
-        <Navbar.Brand href="#home" className="logo-text">
+      <Container className="d-md-flex flex-md-row flex-column">
+        <Navbar.Brand as={Link} to="/" className="logo-text">
           <img src={logo} alt="logo" width={70} height={70} />
           Petal & Grain
         </Navbar.Brand>
-        <div className="d-flex">
+        <div className="d-flex d-md-none">
+          <Nav.Link className="nav-item" as={Link} to="/">
+            Fonts
+          </Nav.Link>
+          <Nav.Link className="nav-item" as={Link} to="/proof">
+            Mockup Generator
+          </Nav.Link>
+          <Nav.Link className="nav-item" target="_blank" href="https://www.etsy.com/shop/PetalAndGrainShop">
+            Etsy Shop
+          </Nav.Link>
+        </div>
+        <div className="d-none d-md-flex">
           <Nav.Link className="nav-item" as={Link} to="/">
             Fonts
           </Nav.Link>

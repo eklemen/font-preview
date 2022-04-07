@@ -1,12 +1,19 @@
-import React, { forwardRef, useContext } from 'react';
+import React, { forwardRef, useContext, useEffect } from 'react';
 import CarouselItem from 'react-bootstrap/CarouselItem';
 import NameInputs from '../NameInputs';
 import { appStore } from '../../context/app.context';
 
 const NameSlide = forwardRef(({ ...rest }, ref) => {
   const {
-    setHideWizard
+    setHideWizard,
+    setInputVal,
   } = useContext(appStore);
+  useEffect(() => {
+    setInputVal({
+      firstName: '',
+      middleName: '',
+    });
+  }, []);
   return (
     <CarouselItem ref={ref} {...rest}>
       <div

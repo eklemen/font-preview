@@ -1,11 +1,7 @@
-.circle {
-    height: 400px;
-    width: 400px;
-    //border: solid 1px black;
-    //border-radius: 50%;
-    position: relative;
-    //background-size: contain;
-}
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/mixins/_breakpoints.scss";
+
 .rectangle-proof-wrapper {
     width: 475px;
     height: 250px;
@@ -37,6 +33,22 @@
     }
 }
 
+.circle {
+    height: 400px;
+    width: 400px;
+    position: relative;
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+        height: auto;
+        .first-name {
+            width: 270px;
+        }
+        .middle-name {
+            width: 170px;
+        }
+    };
+}
+
 .bg-option-wrapper {
     height: 140px;
     align-items: center;
@@ -63,5 +75,12 @@
         p {
             margin: 8px 0 0 0;
         }
+    }
+}
+
+.disclaimer-slide {
+    height: 335px;
+    @include media-breakpoint-down(sm) {
+        height: auto;
     }
 }

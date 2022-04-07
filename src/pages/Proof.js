@@ -28,7 +28,15 @@ const Proof = () => {
         <Container>
           {
             hideWizard
-              ? <Row>
+              ? <Row className="d-flex flex-lg-row-reverse">
+                {
+                  proofAttributes.boardShape === PROOF.shape.circle
+                    ? <Col xs={12} lg={6}><CircleProof /></Col>
+                    : <Col xs={12} lg={6}><RectangleProof /></Col>
+                }
+                <Col xs={12} className="mt-3 d-lg-none">
+                  <h4 className="text-center">- Edit options below -</h4>
+                </Col>
                 <Col xs={12} sm={12} lg={6}>
                   <NameInputs
                     handleChange={handleNameChange}
@@ -37,11 +45,6 @@ const Proof = () => {
                     stacked
                   />
                 </Col>
-                {
-                  proofAttributes.boardShape === PROOF.shape.circle
-                    ? <Col xs={12} lg={6}><CircleProof /></Col>
-                    : <Col xs={12} lg={6}><RectangleProof /></Col>
-                }
               </Row>
               : <MockupWizard />
           }
