@@ -149,8 +149,7 @@
     src: local('HoneyButter'), url('./fonts/HoneyButter.ttf') format('truetype');
 }
 ////////////////////////////
-////////////////////////////
-////////////////////////////
+// New fonts - block
 @font-face {
     font-family: 'Backroads';
     src: local('Backroads'), url('./fonts/Backroads.ttf') format('truetype');
@@ -199,7 +198,44 @@
     font-family: 'WildMango';
     src: local('WildMango'), url('./fonts/WildMango.ttf') format('truetype');
 }
-
+////////////////////////////
+// new fonts - script
+@font-face {
+    font-family: 'Bluebird';
+    src: local('Bluebird'), url('./fonts/Bluebird.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CadosaScript';
+    src: local('CadosaScript'), url('./fonts/CadosaScript.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CaramelEspresso';
+    src: local('CaramelEspresso'), url('./fonts/CaramelEspresso.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Charmed';
+    src: local('Charmed'), url('./fonts/Charmed.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Honeybun';
+    src: local('Honeybun'), url('./fonts/Honeybun.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Hopeful';
+    src: local('Hopeful'), url('./fonts/Hopeful.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Julietta';
+    src: local('Julietta'), url('./fonts/Julietta.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Sugardrop';
+    src: local('Sugardrop'), url('./fonts/Sugardrop.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SummerBerries';
+    src: local('SummerBerries'), url('./fonts/SummerBerries.ttf') format('truetype');
+}
 
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';
