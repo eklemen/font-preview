@@ -1,7 +1,7 @@
 import React from 'react';
 import Col from 'react-bootstrap/Col';
-import logo from '../assets/logo.svg';
 import Row from 'react-bootstrap/Row';
+import logo from '../assets/logo.svg';
 
 const ProofHeader = () => {
   return (

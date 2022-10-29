@@ -260,7 +260,102 @@ export const fontRegistry = [
     script: false,
     size: 3.5,
     favorite: false,
-  }
+  },
+  ////////////////////////////////
+  // New fonts - block
+  {
+    fontFamily: 'Backroads',
+    displayName: 'Brodie',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'BonVivantSerifBold',
+    displayName: 'Bonnie',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'ColdBrew',
+    displayName: 'Bev',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Elementary',
+    displayName: 'Boston',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'GeorgiaPeach',
+    displayName: 'Georgia',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Imaginary',
+    displayName: 'Imogen',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'MagicDust',
+    displayName: 'Maggie',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Roselyn2',
+    displayName: 'Robin',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'SafeHolidayFamily',
+    displayName: 'Poppy',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Sparkle',
+    displayName: 'Sparkle',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'WildMango',
+    displayName: 'Indie',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Imaginary',
+    displayName: 'Imogen',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  ////////////////////////////////
+  // New fonts - script
+  {
+    fontFamily: 'Imaginary',
+    displayName: 'Imogen',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  },
 ];
 
 export const getScriptFonts = fontRegistry

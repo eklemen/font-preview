@@ -148,5 +148,58 @@
     font-family: 'HoneyButter';
     src: local('HoneyButter'), url('./fonts/HoneyButter.ttf') format('truetype');
 }
+////////////////////////////
+////////////////////////////
+////////////////////////////
+@font-face {
+    font-family: 'Backroads';
+    src: local('Backroads'), url('./fonts/Backroads.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BonVivantSerifBold';
+    src: local('BonVivantSerifBold'), url('./fonts/BonVivantSerifBold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'ColdBrew';
+    src: local('ColdBrew'), url('./fonts/ColdBrew.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Elementary';
+    src: local('Elementary'), url('./fonts/Elementary.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GeorgiaPeach';
+    src: local('GeorgiaPeach'), url('./fonts/GeorgiaPeach.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Imaginary';
+    src: local('Imaginary'), url('./fonts/Imaginary.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'MagicDust';
+    src: local('MagicDust'), url('./fonts/MagicDust.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Peachy';
+    src: local('Peachy'), url('./fonts/Peachy.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roselyn2';
+    src: local('Roselyn2'), url('./fonts/Roselyn2.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'SafeHolidayFamily';
+    src: local('SafeHolidayFamily'), url('./fonts/SafeHolidayFamily.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Sparkle';
+    src: local('Sparkle'), url('./fonts/Sparkle.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'WildMango';
+    src: local('WildMango'), url('./fonts/WildMango.ttf') format('truetype');
+}
+
+
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';
