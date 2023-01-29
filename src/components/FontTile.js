@@ -5,15 +5,16 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { Heart, HeartFill } from 'react-bootstrap-icons';
+import { Badge } from 'react-bootstrap';
 
 const FontTile = (
   {
     font,
     inputVal,
     handleFavorite,
-    color,
+    color
   }) => {
-  const { fontFamily, size, script, favorite, displayName, styles } = font;
+  const { fontFamily, size, script, favorite, displayName, styles, popularPick } = font;
   const additionalStyles = color === '#ffffff' ? 'text-shadow-white' : 'text-shadow'
   return (
     <Card
@@ -21,8 +22,23 @@ const FontTile = (
       className="mb-3 font-box"
     >
       <Card.Body>
-        <Card.Subtitle className="text-muted">
-          Font: <strong>{startCase(displayName)}</strong>
+        <Card.Subtitle className="text-muted" style={{
+          display: 'flex',
+          justifyContent: 'space-between'
+        }}>
+          <span>
+            Font: <strong>{startCase(displayName)}</strong>
+          </span>
+          {
+            popularPick
+              ? (
+                <div>
+                  <Badge pill bg="primary">
+                    Popular Pick
+                  </Badge>
+                </div>)
+              : null
+          }
         </Card.Subtitle>
         <Row className="h-100">
           <Col xs={10} className="d-flex align-items-center">

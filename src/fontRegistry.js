@@ -1,4 +1,58 @@
 export const fontRegistry = [
+  // popular picks script
+  {
+    fontFamily: 'MadinaClean',
+    displayName: 'Sally',
+    script: true,
+    popularPick: true,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Dmitrii Chirkov-Joshico-Regular',
+    displayName: 'Mandy',
+    script: true,
+    popularPick: true,
+    size: 3.5,
+    favorite: false,
+    styles: {
+      fontVariantLigatures: 'none'
+    }
+  },
+  {
+    fontFamily: 'ZaneStudio-HelloSunriseScript',
+    displayName: 'Abigail',
+    script: true,
+    popularPick: true,
+    size: 5,
+    favorite: false,
+  },
+  // popular picks block
+  {
+    fontFamily: 'KimberlyGeswein-KGRiseUP',
+    displayName: 'Robert',
+    script: false,
+    popularPick: true,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'CultivatedMind-GardenGrownBCaps',
+    displayName: 'EMMETT',
+    script: false,
+    popularPick: true,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Pompiere-Regular',
+    displayName: 'Alexander',
+    script: false,
+    popularPick: true,
+    size: 3.5,
+    favorite: false,
+  },
+  // end popular picks
   {
     fontFamily: 'Aldedesign-WisdomMerry',
     displayName: 'elizabeth',
@@ -35,28 +89,11 @@ export const fontRegistry = [
     favorite: false,
   },
   {
-    fontFamily: 'CultivatedMind-GardenGrownBCaps',
-    displayName: 'EMMETT',
-    script: false,
-    size: 3.5,
-    favorite: false,
-  },
-  {
     fontFamily: 'Datalegreya-Dot',
     displayName: 'WESTON',
     script: false,
     size: 3.5,
     favorite: false,
-  },
-  {
-    fontFamily: 'Dmitrii Chirkov-Joshico-Regular',
-    displayName: 'Mandy',
-    script: true,
-    size: 3.5,
-    favorite: false,
-    styles: {
-      fontVariantLigatures: 'none'
-    }
   },
   {
     fontFamily: 'Fikryal-HelloSnowflake',
@@ -94,23 +131,9 @@ export const fontRegistry = [
     favorite: false,
   },
   {
-    fontFamily: 'KimberlyGeswein-KGRiseUP',
-    displayName: 'Robert',
-    script: false,
-    size: 3.5,
-    favorite: false,
-  },
-  {
     fontFamily: 'LoveloBlack',
     displayName: 'BRAXTON',
     script: false,
-    size: 3.5,
-    favorite: false,
-  },
-  {
-    fontFamily: 'MadinaClean',
-    displayName: 'Sally',
-    script: true,
     size: 3.5,
     favorite: false,
   },
@@ -125,13 +148,6 @@ export const fontRegistry = [
     fontFamily: 'MegaType-YasmineGardner',
     displayName: 'Rosalie',
     script: true,
-    size: 3.5,
-    favorite: false,
-  },
-  {
-    fontFamily: 'Pompiere-Regular',
-    displayName: 'Alexander',
-    script: false,
     size: 3.5,
     favorite: false,
   },
@@ -175,13 +191,6 @@ export const fontRegistry = [
     displayName: 'Carter',
     script: false,
     size: 3.5,
-    favorite: false,
-  },
-  {
-    fontFamily: 'ZaneStudio-HelloSunriseScript',
-    displayName: 'Abigail',
-    script: true,
-    size: 5,
     favorite: false,
   },
   {
@@ -405,6 +414,50 @@ export const fontRegistry = [
     size: 3.5,
     favorite: false,
   },
+  ////////////////////////
+  // New scripts
+  {
+    fontFamily: 'Aisyah-Demo',
+    displayName: 'Ally',
+    script: true,
+    size: 3,
+    favorite: false,
+  },
+  {
+    fontFamily: 'GlooryScript-Regular',
+    displayName: 'Groovy',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Kimberly',
+    displayName: 'Kimber',
+    script: true,
+    size: 5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Melinda-script',
+    displayName: 'Melly',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'NotoSansGurmukhi',
+    displayName: 'Nelson',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },
+  {
+    fontFamily: 'Saffron',
+    displayName: 'Stella',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  }
 ];
 
 export const getScriptFonts = fontRegistry

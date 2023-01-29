@@ -236,6 +236,31 @@
     font-family: 'SummerBerries';
     src: local('SummerBerries'), url('./fonts/SummerBerries.ttf') format('truetype');
 }
-
+//////////////////////
+//////////////////////
+@font-face {
+    font-family: 'Aisyah-Demo';
+    src: local('Aisyah-Demo'), url('./fonts/Aisyah-Demo.otf') format('opentype');
+}
+@font-face {
+    font-family: 'GlooryScript-Regular';
+    src: local('GlooryScript-Regular'), url('./fonts/GlooryScript-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Kimberly';
+    src: local('Kimberly'), url('./fonts/Kimberly.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Melinda-script';
+    src: local('Melinda-script'), url('./fonts/Melinda-script.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSansGurmukhi';
+    src: local('NotoSansGurmukhi'), url('./fonts/NotoSansGurmukhi.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Saffron';
+    src: local('Saffron'), url('./fonts/Saffron.ttf') format('truetype');
+}
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';
