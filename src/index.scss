@@ -334,5 +334,26 @@
     font-family: 'Vani';
     src: local('Vani'), url('./fonts/Vani.ttf') format('truetype');
 }
+//////
+@font-face {
+    font-family: 'HarlowDuoScript';
+    src: local('HarlowDuoScript'), url('./fonts/HarlowDuoScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'HarlowDuoSerif';
+    src: local('HarlowDuoSerif'), url('./fonts/HarlowDuoSerif.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Hermitage';
+    src: local('Hermitage'), url('./fonts/Hermitage.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SoftWhisperingsBold';
+    src: local('SoftWhisperingsBold'), url('./fonts/SoftWhisperingsBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'TheSeasons-Reg';
+    src: local('TheSeasons-Reg'), url('./fonts/TheSeasons-Reg.otf') format('opentype');
+}
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';

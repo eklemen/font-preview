@@ -588,6 +588,36 @@ export const fontRegistry = [
     script: false,
     size: 3.5,
     favorite: false,
+  },{
+    fontFamily: 'HarlowDuoScript',
+    displayName: 'Harlow',
+    script: true,
+    size: 3,
+    favorite: false,
+  },{
+    fontFamily: 'HarlowDuoSerif',
+    displayName: 'Hardy',
+    script: false,
+    size: 3.5,
+    favorite: false,
+  },{
+    fontFamily: 'Hermitage',
+    displayName: 'Hazel',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  },{
+    fontFamily: 'SoftWhisperingsBold',
+    displayName: 'Winnie',
+    script: true,
+    size: 2.5,
+    favorite: false,
+  },{
+    fontFamily: 'TheSeasons-Reg',
+    displayName: 'Sawyer',
+    script: false,
+    size: 3.5,
+    favorite: false,
   },
 ];
 

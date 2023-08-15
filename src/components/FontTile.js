@@ -5,7 +5,6 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import ToggleButton from 'react-bootstrap/ToggleButton';
 import { Heart, HeartFill } from 'react-bootstrap-icons';
-import { Badge } from 'react-bootstrap';
 
 const FontTile = (
   {
@@ -14,7 +13,7 @@ const FontTile = (
     handleFavorite,
     color
   }) => {
-  const { fontFamily, size, script, favorite, displayName, styles, popularPick } = font;
+  const { fontFamily, size, script, favorite, displayName, styles } = font;
   const additionalStyles = color === '#ffffff' ? 'text-shadow-white' : 'text-shadow'
   return (
     <Card
@@ -29,16 +28,6 @@ const FontTile = (
           <span>
             Font: <strong>{startCase(displayName)}</strong>
           </span>
-          {
-            popularPick
-              ? (
-                <div>
-                  <Badge pill bg="primary">
-                    Popular Pick
-                  </Badge>
-                </div>)
-              : null
-          }
         </Card.Subtitle>
         <Row className="h-100">
           <Col xs={10} className="d-flex align-items-center">
@@ -60,12 +49,12 @@ const FontTile = (
           <Col xs={2} className="d-flex align-items-center fave-btn">
             <ToggleButton
               type="checkbox"
-              variant="link"
+              variant="ghost"
               checked={favorite}
               value={fontFamily}
               onClick={() => handleFavorite({ script, fontFamily })}
             >
-              {favorite ? <HeartFill/> : <Heart/>}
+              {favorite ? <HeartFill color="#b77b43"/> : <Heart color="#b77b43"/>}
             </ToggleButton>
           </Col>
         </Row>

@@ -2,7 +2,7 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
-import logo from '../assets/logo.svg';
+import logo from '../assets/banner1.png';
 import { Link } from 'react-router-dom';
 
 const NavTop = () => {
@@ -11,7 +11,6 @@ const NavTop = () => {
       <Container className="d-md-flex flex-md-row flex-column">
         <Navbar.Brand as={Link} to="/" className="logo-text">
           <img src={logo} alt="logo" width={70} height={70} />
-          Petal & Grain
         </Navbar.Brand>
         <div className="d-flex d-md-none">
           <Nav.Link className="nav-item" as={Link} to="/">

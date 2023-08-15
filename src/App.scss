@@ -16,6 +16,9 @@
     font-family: "Putracetol-CavilayScript", sans-serif;
     font-size: 36px !important;
     height: 70px !important;
+    img {
+        width: 100%;
+    }
 }
 .fave-btn {
     label {
@@ -23,7 +26,7 @@
     }
 }
 .bg-top {
-    background-color: rgba(211, 135, 132, 0.33);
+    background-color: rgb(227, 214, 202);
     margin-bottom: 5rem;
     padding-top: 3rem;
     color: #3e3e3e;
@@ -33,7 +36,7 @@
         height: 100px;
         width: 100%;
         path {
-            fill: rgba(211, 135, 132, 0.33);
+            fill: rgb(227, 214, 202);
         }
     }
 }
@@ -92,5 +95,12 @@
                 stroke: rgb(0,0,0);
             }
         }
+    }
+}
+
+.nav-item {
+    color: #6c757d !important;
+    &:hover {
+        text-decoration: underline;
     }
 }

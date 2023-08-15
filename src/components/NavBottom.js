@@ -25,10 +25,12 @@ const NavBottom = ({ showFaves, setShowFaves }) => {
           style={{
             marginRight: '8px'
           }}
-          className="mb-2 btn btn-outline-primary"
+          className="mb-2"
           role="button"
           to="proof">
-          View Mockup Generator
+          <Button variant="outline-secondary">
+            View Mockup Generator
+          </Button>
         </Link>
         <ShowFavoriteButton showFaves={showFaves} setShowFaves={setShowFaves}/>
       </Container>

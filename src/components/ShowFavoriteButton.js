@@ -5,14 +5,14 @@ const ShowFavoriteButton = ({showFaves, setShowFaves}) => {
   return showFaves
     ? (
       <Button
-        variant="outline-primary"
+        variant="outline-secondary"
         className="mb-2"
         onClick={() => setShowFaves(false)}
       >Show All</Button>
     )
     : (
       <Button
-        variant="outline-primary"
+        variant="outline-secondary"
         className="mb-2"
         onClick={() => setShowFaves(true)}
       >Compare Favorites</Button>
