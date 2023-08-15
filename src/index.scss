@@ -148,8 +148,6 @@
     font-family: 'HoneyButter';
     src: local('HoneyButter'), url('./fonts/HoneyButter.ttf') format('truetype');
 }
-////////////////////////////
-// New fonts - block
 @font-face {
     font-family: 'Backroads';
     src: local('Backroads'), url('./fonts/Backroads.ttf') format('truetype');
@@ -236,8 +234,6 @@
     font-family: 'SummerBerries';
     src: local('SummerBerries'), url('./fonts/SummerBerries.ttf') format('truetype');
 }
-//////////////////////
-//////////////////////
 @font-face {
     font-family: 'Aisyah-Demo';
     src: local('Aisyah-Demo'), url('./fonts/Aisyah-Demo.otf') format('opentype');
@@ -261,6 +257,82 @@
 @font-face {
     font-family: 'Saffron';
     src: local('Saffron'), url('./fonts/Saffron.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Adore';
+    src: local('Adore'), url('./fonts/Adore.otf') format('opentype');
+}
+@font-face {
+    font-family: 'BlancheSemiBold';
+    src: local('BlancheSemiBold'), url('./fonts/BlancheSemiBold.otf') format('opentype');
+}
+@font-face {
+    font-family: 'CanyonlandsScript';
+    src: local('CanyonlandsScript'), url('./fonts/CanyonlandsScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FantastiqueSans';
+    src: local('FantastiqueSans'), url('./fonts/FantastiqueSans.otf') format('opentype');
+}
+@font-face {
+    font-family: 'FantastiqueScript';
+    src: local('FantastiqueScript'), url('./fonts/FantastiqueScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MissMagnolia-Script';
+    src: local('MissMagnolia-Script'), url('./fonts/MissMagnolia-Script.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ModernBohemianSans-Regular';
+    src: local('ModernBohemianSans-Regular'), url('./fonts/ModernBohemianSans-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'ModernBohemianScript-Regular';
+    src: local('ModernBohemianScript-Regular'), url('./fonts/ModernBohemianScript-Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MontereyScript';
+    src: local('MontereyScript'), url('./fonts/MontereyScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'MontlakeRoad';
+    src: local('MontlakeRoad'), url('./fonts/MontlakeRoad.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Neutraface-Text-Book';
+    src: local('Neutraface-Text-Book'), url('./fonts/Neutraface-Text-Book.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Neutraface-Text-Book-Italic';
+    src: local('Neutraface-Text-Book-Italic'), url('./fonts/Neutraface-Text-Book-Italic.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Sangria';
+    src: local('Sangria'), url('./fonts/Sangria.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Somersette';
+    src: local('Somersette'), url('./fonts/Somersette.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SummerLemonade-SansTwo';
+    src: local('SummerLemonade-SansTwo'), url('./fonts/SummerLemonade-SansTwo.otf') format('opentype');
+}
+@font-face {
+    font-family: 'SummerLemonade-Script';
+    src: local('SummerLemonade-Script'), url('./fonts/SummerLemonade-Script.otf') format('opentype');
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: local('Montserrat-Medium'), url('./fonts/Montserrat-Medium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Montserrat-MediumItalic';
+    src: local('Montserrat-MediumItalic'), url('./fonts/Montserrat-MediumItalic.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Vani';
+    src: local('Vani'), url('./fonts/Vani.ttf') format('truetype');
 }
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';
