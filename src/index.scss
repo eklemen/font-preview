@@ -355,5 +355,14 @@
     font-family: 'TheSeasons-Reg';
     src: local('TheSeasons-Reg'), url('./fonts/TheSeasons-Reg.otf') format('opentype');
 }
+/////
+@font-face {
+    font-family: 'SapphireScript';
+    src: local('SapphireScript'), url('./fonts/SapphireScript.otf') format('opentype');
+}
+@font-face {
+    font-family: 'VanillaCupcake';
+    src: local('VanillaCupcake'), url('./fonts/VanillaCupcake.ttf') format('truetype');
+}
 @import './App';
 @import '~bootstrap/scss/bootstrap.scss';

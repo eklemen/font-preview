@@ -618,6 +618,18 @@ export const fontRegistry = [
     script: false,
     size: 3.5,
     favorite: false,
+  },{
+    fontFamily: 'SapphireScript',
+    displayName: 'Saphire',
+    script: true,
+    size: 3.5,
+    favorite: false,
+  },{
+    fontFamily: 'VanillaCupcake',
+    displayName: 'Cupcake',
+    script: true,
+    size: 3.5,
+    favorite: false,
   },
 ];
 
